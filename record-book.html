@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EX Champions Record Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --surface:#FBFBFC; --surface-2:#F1F2F5;
+  --ink:#16181C; --ink-2:#474B54; --ink-3:#787D88;
+  --rule:#DCDEE4; --rule-strong:#C2C6D0;
+  --c11:#1F5FA9; --c12:#A9760C;
+  --c11-wash:#E6EDF7; --c12-wash:#F6EEDC;
+  --good:#1F5FA9; --bad:#A9760C; --unk:#B4B8C2;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --surface:#131519; --surface-2:#1B1E24;
+    --ink:#EDEFF3; --ink-2:#A8AEBA; --ink-3:#757C89;
+    --rule:#2A2E36; --rule-strong:#3A3F49;
+    --c11:#4884CE; --c12:#C08A1E;
+    --c11-wash:#1A2533; --c12-wash:#2A2313;
+    --good:#4884CE; --bad:#C08A1E; --unk:#474C57;
+  }
+}
+:root[data-theme="dark"]{
+  --surface:#131519; --surface-2:#1B1E24;
+  --ink:#EDEFF3; --ink-2:#A8AEBA; --ink-3:#757C89;
+  --rule:#2A2E36; --rule-strong:#3A3F49;
+  --c11:#4884CE; --c12:#C08A1E;
+  --c11-wash:#1A2533; --c12-wash:#2A2313;
+  --good:#4884CE; --bad:#C08A1E; --unk:#474C57;
+}
+*{box-sizing:border-box}
+body{background:var(--surface); color:var(--ink);
+  font-family:"Newsreader",Georgia,serif; font-size:17px; line-height:1.55; margin:0;
+  padding-block:40px 64px; padding-left:20px; padding-right:20px; -webkit-font-smoothing:antialiased}
+.wrap{max-width:900px; margin:0 auto}
+.disp{font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800; line-height:.92; letter-spacing:.01em}
+.eyebrow,.chip,.cn,.when,.v,.tc,.ty,.num,table,caption,footer,.cy,.rank,.sub-h2
+  {font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+.eyebrow{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3); margin:0 0 18px}
+h1.disp{font-size:clamp(50px,10.5vw,92px); margin:0; text-wrap:balance}
+.standfirst{font-size:19px; color:var(--ink-2); max-width:60ch; margin:20px 0 0;
+  border-left:2px solid var(--rule-strong); padding-left:16px}
+h2.disp{font-size:29px; margin:54px 0 4px; letter-spacing:.02em}
+.sub-h{font-size:14.5px; color:var(--ink-3); margin:0 0 16px; max-width:64ch}
+.chip{font-size:10px; font-weight:600; letter-spacing:.05em; padding:2px 6px; border-radius:2px; flex:none}
+.chip.c11{background:var(--c11-wash); color:var(--c11)}
+.chip.c12{background:var(--c12-wash); color:var(--c12)}
+.chip.cx{background:var(--surface-2); color:var(--ink-3)}
+/* champions */
+.champs{list-style:none; margin:0; padding:0}
+.crow{display:grid; grid-template-columns:62px minmax(96px,auto) 44px 1fr; gap:12px; align-items:center;
+  padding:9px 0; border-bottom:1px solid var(--rule)}
+.cy{font-size:15px; font-weight:600; color:var(--ink-2); font-variant-numeric:tabular-nums}
+.cm{font-size:18px; font-weight:500}
+.cm em{color:var(--ink-3); font-size:16px}
+.cn{font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3)}
+/* titles */
+.trow{display:grid; grid-template-columns:88px 42px auto 26px 1fr; gap:10px; align-items:center;
+  padding:9px 0; border-bottom:1px solid var(--rule)}
+.tn{font-size:17px; font-weight:500}
+.rings{display:flex; gap:5px}
+.ring{width:14px; height:14px; border-radius:50%}
+.ring.c11{background:var(--c11)} .ring.c12{background:var(--c12)}
+.tc{font-size:13px; font-weight:600; color:var(--ink-3); text-align:right}
+.ty{font-size:11.5px; color:var(--ink-3); letter-spacing:.04em}
+.none{margin-top:12px; font-size:15px; color:var(--ink-3); font-style:italic}
+/* extremes lists */
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:14px 30px}
+.ex{list-style:none; margin:0; padding:0}
+.ex li{display:grid; grid-template-columns:72px 1fr; gap:10px; align-items:baseline;
+  padding:8px 0; border-bottom:1px solid var(--rule)}
+.ex .v{font-size:15px; font-weight:600; font-variant-numeric:tabular-nums}
+.ex .v.good{color:var(--good)} .ex .v.bad{color:var(--bad)}
+.ex .w{font-size:15.5px}
+.ex .when{grid-column:2; font-size:10.5px; letter-spacing:.05em; color:var(--ink-3); text-transform:uppercase}
+.sub-h2{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin:0 0 6px}
+/* tables */
+.tablewrap{overflow-x:auto; border:1px solid var(--rule); border-radius:3px; margin-top:12px}
+table{border-collapse:collapse; width:100%; font-size:13.5px}
+th,td{text-align:left; padding:8px 13px; border-top:1px solid var(--rule); white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+th{font-weight:600; font-size:10.5px; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--ink-3); background:var(--surface-2)}
+td.dim{color:var(--ink-3)} td.c11{color:var(--c11)} td.c12{color:var(--c12)}
+td.good{color:var(--good); font-weight:600} td.bad{color:var(--bad); font-weight:600}
+td.num{font-weight:600}
+.notes{font-size:15.5px; color:var(--ink-2); max-width:64ch}
+.notes p{margin:0 0 12px}
+.notes strong{color:var(--ink); font-weight:500}
+footer{margin-top:46px; padding-top:16px; border-top:1px solid var(--rule);
+  font-size:10.5px; letter-spacing:.05em; color:var(--ink-3); line-height:1.8}
+@media print{
+  *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  @page{ margin:0; }
+  html,body{ background:var(--surface) !important; }
+  body{ padding:15mm 13mm; font-size:10.5pt; }
+  .wrap{ max-width:none; margin:0; }
+  h1.disp{ font-size:46pt; }
+  h2.disp{ font-size:19pt; margin-top:26px; break-after:avoid; page-break-after:avoid; }
+  .standfirst{ font-size:12pt; }
+  .row,.hrow,.fig,.figs,.crow,.trow,.ex li,.notes p,tr,footer,.tablewrap
+    { break-inside:avoid; page-break-inside:avoid; }
+  .tablewrap{ overflow:visible; }
+  .legend{ break-inside:avoid; }
+}
+@media (max-width:660px){
+  .cols{grid-template-columns:1fr}
+  .crow{grid-template-columns:56px 1fr 40px; row-gap:2px}
+  .crow .cn{grid-column:2 / -1}
+  .trow{grid-template-columns:80px 38px auto 24px; row-gap:2px}
+  .trow .ty{grid-column:1 / -1}
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <p class="eyebrow">EX Champions League &nbsp;&middot;&nbsp; Sigma Chi &nbsp;&middot;&nbsp; Washington &amp; Lee</p>
+  <h1 class="disp">The Record Book</h1>
+  <p class="standfirst">Every champion, every extreme, and every number worth arguing about &mdash; assembled from the Yahoo archive (2014&ndash;2023), the commissioner&rsquo;s keeper spreadsheet, and the Sleeper API (2024&ndash;2026).</p>
+
+  <h2 class="disp">Champions</h2>
+  <p class="sub-h">Twelve seasons on record. Six titles to the class of 2011, six to the class of 2012 &mdash; and the gap has never been wider than one.</p>
+  <ul class="champs"><li class="crow">
+  <span class="cy">2014</span>
+  <span class="cm">Detrick</span>
+  <span class="chip c12">&rsquo;12</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2015</span>
+  <span class="cm">Dan</span>
+  <span class="chip c11">&rsquo;11</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2016</span>
+  <span class="cm">Tyler</span>
+  <span class="chip c12">&rsquo;12</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2017</span>
+  <span class="cm">Tyler</span>
+  <span class="chip c12">&rsquo;12</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2018</span>
+  <span class="cm">Armstrong</span>
+  <span class="chip c11">&rsquo;11</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2019</span>
+  <span class="cm">Dan</span>
+  <span class="chip c11">&rsquo;11</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2020</span>
+  <span class="cm">Detrick</span>
+  <span class="chip c12">&rsquo;12</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2021</span>
+  <span class="cm">Scott</span>
+  <span class="chip c11">&rsquo;11</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2022</span>
+  <span class="cm">Taylor</span>
+  <span class="chip c12">&rsquo;12</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2023</span>
+  <span class="cm">Tyler</span>
+  <span class="chip c12">&rsquo;12</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2024</span>
+  <span class="cm">Dan</span>
+  <span class="chip c11">&rsquo;11</span>
+  <span class="cn"></span></li><li class="crow">
+  <span class="cy">2025</span>
+  <span class="cm">Greg</span>
+  <span class="chip c11">&rsquo;11</span>
+  <span class="cn"></span></li></ul>
+
+
+
+  <h2 class="disp">Rings</h2>
+  <p class="sub-h">Seven winners across twelve seasons. Five men have never held the trophy.</p>
+  <div class="trow"><span class="tn">Dan</span><span class="chip c11">&rsquo;11</span><span class="rings"><span class="ring c11"></span><span class="ring c11"></span><span class="ring c11"></span></span><span class="tc">3</span><span class="ty">2015, 2019, 2024</span></div><div class="trow"><span class="tn">Tyler</span><span class="chip c12">&rsquo;12</span><span class="rings"><span class="ring c12"></span><span class="ring c12"></span><span class="ring c12"></span></span><span class="tc">3</span><span class="ty">2016, 2017, 2023</span></div><div class="trow"><span class="tn">Detrick</span><span class="chip c12">&rsquo;12</span><span class="rings"><span class="ring c12"></span><span class="ring c12"></span></span><span class="tc">2</span><span class="ty">2014, 2020</span></div><div class="trow"><span class="tn">Armstrong</span><span class="chip c11">&rsquo;11</span><span class="rings"><span class="ring c11"></span></span><span class="tc">1</span><span class="ty">2018</span></div><div class="trow"><span class="tn">Scott</span><span class="chip c11">&rsquo;11</span><span class="rings"><span class="ring c11"></span></span><span class="tc">1</span><span class="ty">2021</span></div><div class="trow"><span class="tn">Taylor</span><span class="chip c12">&rsquo;12</span><span class="rings"><span class="ring c12"></span></span><span class="tc">1</span><span class="ty">2022</span></div><div class="trow"><span class="tn">Greg</span><span class="chip c11">&rsquo;11</span><span class="rings"><span class="ring c11"></span></span><span class="tc">1</span><span class="ty">2025</span></div>
+  <p class="none">Still waiting: Brian, Joe, Max, Sam, Tom.</p>
+
+  <h2 class="disp">All-time record</h2>
+  <p class="sub-h">Sleeper era only &mdash; 2024, 2025 and week 1 of 2026, the seasons with surviving game-by-game results. Twenty-nine games each.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th scope="col">Team</th><th scope="col">Manager</th><th scope="col">W&ndash;L</th>
+    <th scope="col">Points for</th><th scope="col">Points against</th><th scope="col">Avg</th></tr></thead>
+    <tbody><tr><td>YoSoyFiesta</td><td class="dim">Dan</td><td><b>19&ndash;10</b></td><td>3157.1</td><td>2830.0</td><td class="c11">108.87</td></tr><tr><td>Table Smashers</td><td class="dim">Tyler</td><td><b>18&ndash;11</b></td><td>3260.0</td><td>2997.3</td><td class="c12">112.41</td></tr><tr><td>Uncle Rico</td><td class="dim">Greg</td><td><b>17&ndash;12</b></td><td>3088.4</td><td>2789.0</td><td class="c11">106.50</td></tr><tr><td>scert</td><td class="dim">Scott</td><td><b>16&ndash;13</b></td><td>3404.7</td><td>3138.1</td><td class="c11">117.40</td></tr><tr><td>Roughnecks</td><td class="dim">Joe</td><td><b>16&ndash;13</b></td><td>3103.9</td><td>2989.0</td><td class="c11">107.03</td></tr><tr><td>vaught12</td><td class="dim">Taylor</td><td><b>15&ndash;14</b></td><td>2969.6</td><td>3062.8</td><td class="c12">102.40</td></tr><tr><td>maxhagler</td><td class="dim">Max</td><td><b>14&ndash;15</b></td><td>2927.9</td><td>2978.8</td><td class="c12">100.96</td></tr><tr><td>Kids College Funds</td><td class="dim">Armstrong</td><td><b>13&ndash;16</b></td><td>3011.8</td><td>3211.6</td><td class="c11">103.85</td></tr><tr><td>Win One for the Lipper</td><td class="dim">Tom</td><td><b>12&ndash;17</b></td><td>2958.7</td><td>3071.0</td><td class="c11">102.03</td></tr><tr><td>Team bxkeegan</td><td class="dim">Brian</td><td><b>12&ndash;17</b></td><td>2718.6</td><td>2996.2</td><td class="c11">93.75</td></tr><tr><td>The Skin</td><td class="dim">Sam</td><td><b>11&ndash;18</b></td><td>2905.9</td><td>3145.2</td><td class="c12">100.20</td></tr><tr><td>Cooking With Friends</td><td class="dim">Detrick</td><td><b>11&ndash;18</b></td><td>2720.7</td><td>3018.2</td><td class="c12">93.82</td></tr></tbody>
+  </table></div>
+
+  <h2 class="disp">Single-week extremes</h2>
+  <div class="cols">
+    <div><p class="sub-h2">Highest scores</p><ul class="ex"><li><span class="v good">167.86</span><span class="w">Table Smashers</span><span class="when">2025 &middot; wk 12</span></li><li><span class="v good">154.64</span><span class="w">maxhagler</span><span class="when">2024 &middot; wk 11</span></li><li><span class="v good">154.16</span><span class="w">scert</span><span class="when">2024 &middot; wk 2</span></li><li><span class="v good">153.38</span><span class="w">Table Smashers</span><span class="when">2024 &middot; wk 11</span></li><li><span class="v good">152.82</span><span class="w">Roughnecks</span><span class="when">2025 &middot; wk 8</span></li><li><span class="v good">152.76</span><span class="w">Cooking With Friends</span><span class="when">2024 &middot; wk 10</span></li></ul></div>
+    <div><p class="sub-h2">Lowest scores</p><ul class="ex"><li><span class="v bad">27.50</span><span class="w">Team bxkeegan</span><span class="when">2025 &middot; wk 12</span></li><li><span class="v bad">42.64</span><span class="w">Cooking With Friends</span><span class="when">2024 &middot; wk 2</span></li><li><span class="v bad">48.10</span><span class="w">Team bxkeegan</span><span class="when">2025 &middot; wk 11</span></li><li><span class="v bad">52.28</span><span class="w">Team bxkeegan</span><span class="when">2025 &middot; wk 14</span></li><li><span class="v bad">52.62</span><span class="w">Cooking With Friends</span><span class="when">2025 &middot; wk 6</span></li><li><span class="v bad">54.40</span><span class="w">Team bxkeegan</span><span class="when">2025 &middot; wk 10</span></li></ul></div>
+  </div>
+
+  <h2 class="disp">Beatdowns and heartbreaks</h2>
+  <div class="cols">
+    <div><p class="sub-h2">Biggest margins</p><ul class="ex"><li><span class="v good">97.04</span><span class="w">Table Smashers <b>167.86</b> <span class="dim">def</span> Kids College Funds 70.82</span><span class="when">2025 &middot; wk 12</span></li><li><span class="v good">95.52</span><span class="w">scert <b>149.92</b> <span class="dim">def</span> Team bxkeegan 54.40</span><span class="when">2025 &middot; wk 10</span></li><li><span class="v good">91.82</span><span class="w">Uncle Rico <b>119.32</b> <span class="dim">def</span> Team bxkeegan 27.50</span><span class="when">2025 &middot; wk 12</span></li><li><span class="v good">68.16</span><span class="w">vaught12 <b>110.80</b> <span class="dim">def</span> Cooking With Friends 42.64</span><span class="when">2024 &middot; wk 2</span></li><li><span class="v good">65.70</span><span class="w">Cooking With Friends <b>122.52</b> <span class="dim">def</span> maxhagler 56.82</span><span class="when">2025 &middot; wk 3</span></li></ul></div>
+    <div><p class="sub-h2">Closest finishes</p><ul class="ex"><li><span class="v bad">0.46</span><span class="w">Uncle Rico <b>115.42</b> <span class="dim">def</span> Table Smashers 114.96</span><span class="when">2025 &middot; wk 8</span></li><li><span class="v bad">0.64</span><span class="w">Uncle Rico <b>112.80</b> <span class="dim">def</span> Kids College Funds 112.16</span><span class="when">2024 &middot; wk 6</span></li><li><span class="v bad">0.68</span><span class="w">scert <b>145.68</b> <span class="dim">def</span> YoSoyFiesta 145.00</span><span class="when">2024 &middot; wk 14</span></li><li><span class="v bad">0.94</span><span class="w">Team bxkeegan <b>115.70</b> <span class="dim">def</span> Table Smashers 114.76</span><span class="when">2024 &middot; wk 9</span></li><li><span class="v bad">1.26</span><span class="w">The Skin <b>124.38</b> <span class="dim">def</span> maxhagler 123.12</span><span class="when">2024 &middot; wk 6</span></li></ul></div>
+  </div>
+
+  <h2 class="disp">Streaks</h2>
+  <p class="sub-h">Longest runs in the Sleeper era, counted across season boundaries.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th scope="col">Team</th><th scope="col">Manager</th><th scope="col">Best win streak</th><th scope="col">Worst losing streak</th></tr></thead>
+    <tbody><tr><td>Uncle Rico</td><td class="dim">Greg</td><td class="good">9</td><td class="bad">4</td></tr><tr><td>YoSoyFiesta</td><td class="dim">Dan</td><td class="good">7</td><td class="bad">3</td></tr><tr><td>Roughnecks</td><td class="dim">Joe</td><td class="good">6</td><td class="bad">3</td></tr><tr><td>Table Smashers</td><td class="dim">Tyler</td><td class="good">5</td><td class="bad">2</td></tr><tr><td>vaught12</td><td class="dim">Taylor</td><td class="good">5</td><td class="bad">3</td></tr><tr><td>Kids College Funds</td><td class="dim">Armstrong</td><td class="good">5</td><td class="bad">6</td></tr><tr><td>The Skin</td><td class="dim">Sam</td><td class="good">4</td><td class="bad">5</td></tr><tr><td>Win One for the Lipper</td><td class="dim">Tom</td><td class="good">4</td><td class="bad">4</td></tr><tr><td>Team bxkeegan</td><td class="dim">Brian</td><td class="good">4</td><td class="bad">7</td></tr><tr><td>maxhagler</td><td class="dim">Max</td><td class="good">3</td><td class="bad">6</td></tr><tr><td>scert</td><td class="dim">Scott</td><td class="good">3</td><td class="bad">3</td></tr><tr><td>Cooking With Friends</td><td class="dim">Detrick</td><td class="good">3</td><td class="bad">9</td></tr></tbody>
+  </table></div>
+
+  <h2 class="disp">Who can actually set a lineup</h2>
+  <p class="sub-h">Points scored as a share of the best lineup that roster could have started, every week since 2024. This measures the manager, not the draft.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th scope="col">Team</th><th scope="col">Manager</th><th scope="col">Efficiency</th>
+    <th scope="col">Points benched</th><th scope="col">Perfect weeks</th></tr></thead>
+    <tbody><tr><td>scert</td><td class="dim">Scott</td><td><b>92.3%</b></td><td>285</td><td>4</td></tr><tr><td>Table Smashers</td><td class="dim">Tyler</td><td><b>92.1%</b></td><td>281</td><td>1</td></tr><tr><td>YoSoyFiesta</td><td class="dim">Dan</td><td><b>91.6%</b></td><td>288</td><td>5</td></tr><tr><td>Roughnecks</td><td class="dim">Joe</td><td><b>90.4%</b></td><td>330</td><td>2</td></tr><tr><td>Cooking With Friends</td><td class="dim">Detrick</td><td><b>90.1%</b></td><td>300</td><td>4</td></tr><tr><td>vaught12</td><td class="dim">Taylor</td><td><b>89.9%</b></td><td>332</td><td>2</td></tr><tr><td>Win One for the Lipper</td><td class="dim">Tom</td><td><b>89.1%</b></td><td>360</td><td>3</td></tr><tr><td>Uncle Rico</td><td class="dim">Greg</td><td><b>88.5%</b></td><td>402</td><td>1</td></tr><tr><td>maxhagler</td><td class="dim">Max</td><td><b>86.9%</b></td><td>441</td><td>1</td></tr><tr><td>Kids College Funds</td><td class="dim">Armstrong</td><td><b>86.3%</b></td><td>477</td><td>3</td></tr><tr><td>The Skin</td><td class="dim">Sam</td><td><b>85.7%</b></td><td>486</td><td>2</td></tr><tr><td>Team bxkeegan</td><td class="dim">Brian</td><td><b>85.5%</b></td><td>460</td><td>1</td></tr></tbody>
+  </table></div>
+  <p class="sub-h2" style="margin-top:22px">Worst single weeks of management</p>
+  <ul class="ex"><li><span class="v bad">44.5%</span><span class="w">Team bxkeegan &mdash; scored 27.50 of a possible 61.80</span><span class="when">2025 &middot; wk 12</span></li><li><span class="v bad">49.5%</span><span class="w">Team bxkeegan &mdash; scored 57.16 of a possible 115.36</span><span class="when">2025 &middot; wk 6</span></li><li><span class="v bad">59.6%</span><span class="w">Team bxkeegan &mdash; scored 54.40 of a possible 91.20</span><span class="when">2025 &middot; wk 10</span></li><li><span class="v bad">64.3%</span><span class="w">Kids College Funds &mdash; scored 78.32 of a possible 121.82</span><span class="when">2025 &middot; wk 9</span></li><li><span class="v bad">65.3%</span><span class="w">maxhagler &mdash; scored 71.58 of a possible 109.66</span><span class="when">2025 &middot; wk 4</span></li><li><span class="v bad">66.1%</span><span class="w">vaught12 &mdash; scored 79.20 of a possible 119.76</span><span class="when">2026 &middot; wk 1</span></li></ul>
+
+  <h2 class="disp">The Yahoo years</h2>
+  <p class="sub-h">All-time records from Yahoo&rsquo;s own Record Book, covering 2014 through 2023. Drew Jacoby and Ned Lundvall have since left the league; Greg took over Drew&rsquo;s franchise in 2019.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th scope="col">Record</th><th scope="col">Holder</th><th scope="col">When</th><th scope="col">Value</th></tr></thead>
+    <tbody><tr><td>Most points, one week</td><td>Joe vs. Sam</td><td class="dim">Wk 5, 2019</td><td class="num">205.84</td></tr><tr><td>Largest margin of victory</td><td>Joe vs. Sam</td><td class="dim">Wk 5, 2019</td><td class="num">116.20</td></tr><tr><td>Most points, season</td><td>Tyler</td><td class="dim">2014</td><td class="num">2051</td></tr><tr><td>Most offensive points, season</td><td>Detrick</td><td class="dim">2014</td><td class="num">1765</td></tr><tr><td>Most wins, season</td><td>Dan</td><td class="dim">2019</td><td class="num">12</td></tr><tr><td>Longest win streak</td><td>Armstrong</td><td class="dim">2014</td><td class="num">8</td></tr><tr><td>Most losses, season</td><td>Sam</td><td class="dim">2014</td><td class="num">13</td></tr><tr><td>Longest losing streak</td><td>Ned Lundvall</td><td class="dim">2015</td><td class="num">10</td></tr><tr><td>Fewest points, one week</td><td>Dan</td><td class="dim">Wk 14, 2020</td><td class="num">43.30</td></tr><tr><td>Largest average margin of victory</td><td>Tom</td><td class="dim">2020</td><td class="num">43.54</td></tr><tr><td>Largest average margin of defeat</td><td>Detrick</td><td class="dim">2019</td><td class="num">46.23</td></tr><tr><td>Smallest margin of defeat</td><td>Detrick vs. Sam</td><td class="dim">Wk 12, 2021</td><td class="num">0.06</td></tr><tr><td>Hardest schedule</td><td>Max</td><td class="dim">2014</td><td class="num">130.73</td></tr><tr><td>Easiest schedule</td><td>Drew Jacoby</td><td class="dim">2017</td><td class="num">88.99</td></tr></tbody>
+  </table></div>
+
+  <h2 class="disp">Things worth knowing</h2>
+  <div class="notes">
+    <p><strong>The most violent game ever played was Joe hanging 205.84 on Sam</strong> in week 5 of 2019 &mdash; a 116.20-point win that remains both the highest single score and the largest margin in league history.</p>
+    <p><strong>Dan founded this thing, not Tyler.</strong> Yahoo lists Dan as commissioner in 2014 and 2015 with Tyler as his co-commissioner. Tyler has run it since 2017.</p>
+    <p><strong>Dan&rsquo;s team was called &ldquo;BXK Sux&rdquo; for years</strong> &mdash; bxkeegan sucks. He named his franchise after trash-talking Brian, and kept it that way through at least 2021.</p>
+    <p><strong>Greg has the longest win streak of the Sleeper era, at nine.</strong> The easiest schedule ever played (88.99 a week, 2017) belongs to Drew Jacoby &mdash; whose franchise Greg took over in 2019.</p>
+    <p><strong>Brian owns the floor.</strong> The three lowest scores of the Sleeper era are all his, including a 27.50 in week 12 of 2025 &mdash; from a roster that could have started 61.80.</p>
+    <p><strong>Detrick has two rings and the worst losing streak on record.</strong> Champion in 2014 and 2020, then nine straight defeats. <strong>Sam owns the other end</strong> &mdash; 13 losses in 2014 is still the most in a single season.</p>
+    <p><strong>Scott manages better than anyone.</strong> The highest lineup efficiency in the league, the fewest points left on the bench, and the 2021 title.</p>
+  </div>
+
+  <footer>Sleeper-era figures cover 2024, 2025 and week 1 of 2026. Yahoo figures cover 2014&ndash;2023 and include the predecessor league.<br>
+  Sources: Yahoo Fantasy archive and Record Book, Sigmach Fantasy Football.xlsx, and the Sleeper API. Compiled 15 September 2026.</footer>
+</div>
+
+</body>
+</html>

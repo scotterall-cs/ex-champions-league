@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EX Champions League</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --surface:#131519; --surface-2:#1B1E24;
+  --ink:#EDEFF3; --ink-2:#A8AEBA; --ink-3:#757C89;
+  --rule:#2A2E36; --rule-strong:#3A3F49;
+  --c11:#4884CE; --c12:#C08A1E;
+  --c11-wash:#1A2533; --c12-wash:#2A2313;
+}
+*{box-sizing:border-box}
+body{background:var(--surface); color:var(--ink);
+  font-family:"Newsreader",Georgia,serif; font-size:17px; line-height:1.55; margin:0;
+  padding-block:52px 64px; padding-left:20px; padding-right:20px; -webkit-font-smoothing:antialiased}
+.wrap{max-width:820px; margin:0 auto}
+.disp{font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800; line-height:.92}
+.mono,.eyebrow,.card-k,.stat-k,footer{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+.eyebrow{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3); margin:0 0 16px}
+h1.disp{font-size:clamp(50px,11vw,88px); margin:0; letter-spacing:.01em}
+.standfirst{font-size:19px; color:var(--ink-2); max-width:56ch; margin:20px 0 0;
+  border-left:2px solid var(--rule-strong); padding-left:16px}
+.stats{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:34px 0 6px}
+.stat{background:var(--surface-2); border:1px solid var(--rule); border-radius:3px; padding:14px 16px}
+.stat-k{font-size:9.5px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3)}
+.stat-v{display:flex; align-items:baseline; gap:7px; margin-top:7px;
+  font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800;
+  font-size:clamp(30px,6vw,42px); line-height:.85; font-variant-numeric:tabular-nums}
+.a{color:var(--c11)} .b{color:var(--c12)}
+.dash{font-weight:500; color:var(--ink-3); font-size:.8em}
+.cards{display:grid; gap:14px; margin-top:40px}
+a.card{display:block; text-decoration:none; color:inherit; background:var(--surface-2);
+  border:1px solid var(--rule); border-left:3px solid var(--c11); border-radius:3px;
+  padding:22px 24px; transition:border-color .15s, background .15s}
+a.card:nth-child(2){border-left-color:var(--c12)}
+a.card:hover,a.card:focus-visible{background:#20242c; border-color:var(--rule-strong)}
+a.card:nth-child(1):hover,a.card:nth-child(1):focus-visible{border-left-color:var(--c11)}
+a.card:nth-child(2):hover,a.card:nth-child(2):focus-visible{border-left-color:var(--c12)}
+a.card:focus-visible{outline:2px solid var(--c11); outline-offset:3px}
+.card-k{font-size:9.5px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.card-t{font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800;
+  font-size:38px; line-height:1; margin:8px 0 9px}
+.card-d{font-size:15.5px; color:var(--ink-2); margin:0; max-width:56ch}
+footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
+  font-size:10.5px; letter-spacing:.05em; color:var(--ink-3); line-height:1.8}
+@media (max-width:620px){
+  .stats{grid-template-columns:1fr}
+  .card-t{font-size:31px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Sigma Chi &nbsp;&middot;&nbsp; Washington &amp; Lee</p>
+  <h1 class="disp">EX Champions League</h1>
+  <p class="standfirst">Twelve seasons on the record, from the 2014 Yahoo archive through the current Sleeper era. The class of 2011 and the class of 2012 are level on championships and always have been.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-k">Championships</div>
+      <div class="stat-v"><span class="a">6</span><span class="dash">&ndash;</span><span class="b">6</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">Top-six finishes</div>
+      <div class="stat-v"><span class="a">37</span><span class="dash">&ndash;</span><span class="b">30</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">Cross-class games</div>
+      <div class="stat-v"><span class="a">49</span><span class="dash">&ndash;</span><span class="b">42</span></div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="2011-vs-2012.html">
+      <div class="card-k">The rivalry</div>
+      <div class="card-t">2011 vs 2012</div>
+      <p class="card-d">Every season's champion and playoff top six, colour-coded by pledge class, plus the cross-class head-to-head record for the years the game logs survive.</p>
+    </a>
+    <a class="card" href="record-book.html">
+      <div class="card-k">All-time records</div>
+      <div class="card-t">The Record Book</div>
+      <p class="card-d">Champions, rings by manager, the all-time standings, single-week highs and lows, biggest beatdowns, longest streaks, and who can actually set a lineup.</p>
+    </a>
+  </div>
+
+  <footer>Sources: Yahoo Fantasy archive and Record Book (2014&ndash;2023), the commissioner&rsquo;s keeper spreadsheet, and the Sleeper API (2024&ndash;2026).<br>
+  Last updated 15 September 2026.</footer>
+</div>
+</body>
+</html>
