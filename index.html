@@ -39,10 +39,10 @@ h1.disp{font-size:clamp(50px,11vw,88px); margin:0; letter-spacing:.01em}
 a.card{display:block; text-decoration:none; color:inherit; background:var(--surface-2);
   border:1px solid var(--rule); border-left:3px solid var(--c11); border-radius:3px;
   padding:22px 24px; transition:border-color .15s, background .15s}
-a.card:nth-child(2){border-left-color:var(--c12)}
+a.card.recap{border-left-color:var(--ink-3)}
+a.card.rivalry{border-left-color:var(--c11)}
+a.card.records{border-left-color:var(--c12)}
 a.card:hover,a.card:focus-visible{background:#20242c; border-color:var(--rule-strong)}
-a.card:nth-child(1):hover,a.card:nth-child(1):focus-visible{border-left-color:var(--c11)}
-a.card:nth-child(2):hover,a.card:nth-child(2):focus-visible{border-left-color:var(--c12)}
 a.card:focus-visible{outline:2px solid var(--c11); outline-offset:3px}
 .card-k{font-size:9.5px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
 .card-t{font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800;
@@ -73,17 +73,22 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
     </div>
     <div class="stat">
       <div class="stat-k">Cross-class games</div>
-      <div class="stat-v"><span class="a">49</span><span class="dash">&ndash;</span><span class="b">42</span></div>
+      <div class="stat-v"><span class="a">50</span><span class="dash">&ndash;</span><span class="b">46</span></div>
     </div>
   </div>
 
   <div class="cards">
-    <a class="card" href="2011-vs-2012.html">
+    <a class="card recap" href="week-2.html">
+      <div class="card-k">Latest recap &middot; 2026 season</div>
+      <div class="card-t">Week 2</div>
+      <p class="card-d">Twenty-twelve takes the week 4&ndash;1, Armstrong loses by a tenth of a point, and Bowden benches Mahomes and Kelce in the same lineup.</p>
+    </a>
+    <a class="card rivalry" href="2011-vs-2012.html">
       <div class="card-k">The rivalry</div>
       <div class="card-t">2011 vs 2012</div>
       <p class="card-d">Every season's champion and playoff top six, colour-coded by pledge class, plus the cross-class head-to-head record for the years the game logs survive.</p>
     </a>
-    <a class="card" href="record-book.html">
+    <a class="card records" href="record-book.html">
       <div class="card-k">All-time records</div>
       <div class="card-t">The Record Book</div>
       <p class="card-d">Champions, rings by manager, the all-time standings, single-week highs and lows, biggest beatdowns, longest streaks, and who can actually set a lineup.</p>
@@ -91,7 +96,7 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   </div>
 
   <footer>Sources: Yahoo Fantasy archive and Record Book (2014&ndash;2023), the commissioner&rsquo;s keeper spreadsheet, and the Sleeper API (2024&ndash;2026).<br>
-  Last updated 15 September 2026.</footer>
+  Last updated 22 September 2026.</footer>
 </div>
 </body>
 </html>
