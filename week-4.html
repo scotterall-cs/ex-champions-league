@@ -72,6 +72,7 @@ li.g.cross{background:linear-gradient(90deg,transparent,rgba(72,132,206,.05))}
 .pn{font-size:15.5px}
 .pp{font-size:10px; color:var(--ink-3); letter-spacing:.06em}
 .pt{grid-column:2; font-size:10.5px; color:var(--ink-3); letter-spacing:.05em; text-transform:uppercase}
+td.opt{color:var(--ink-3); font-style:italic}
 .cap{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin:0 0 8px}
 table{border-collapse:collapse; width:100%; font-size:13px}
 th,td{text-align:left; padding:7px 12px; border-top:1px solid var(--rule); white-space:nowrap; font-variant-numeric:tabular-nums}
@@ -101,6 +102,10 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   li.g{grid-template-columns:1fr auto; row-gap:2px}
   li.g .gd{display:none} li.g .gm{grid-column:2; text-align:right}
   .eff li{grid-template-columns:104px 1fr 46px 42px}
+  table{font-size:11px}
+  th,td{padding:6px 7px}
+  th{font-size:9px; letter-spacing:.04em}
+  td:first-child{max-width:118px; overflow:hidden; text-overflow:ellipsis}
 }
 </style>
 </head>
@@ -142,9 +147,10 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   <section class="story"><div class="sh"><span class="si">&#127919;</span><span class="sk">Perfect week</span><span class="st c12">The Skin</span></div><p>Sam started <b>100.0%</b> of his optimal lineup &mdash; the second perfect week in three &mdash; put 130.52 on Brian, and now <b>leads the entire league in points</b> at 490.38. Nobody drafted him to be here. He is 3&ndash;1 and the only 2012 team anybody should be worried about.</p></section><section class="story"><div class="sh"><span class="si">&#129327;</span><span class="sk">Lineup crime</span><span class="st c12">vaught12</span></div><p>Taylor scored 91.18 from a roster worth <b>137.68</b> &mdash; 66.2% efficiency, 46.50 points abandoned on his bench, the worst-managed week of the season by a distance. He owned the second-best roster in the league on Sunday and finished tenth in scoring. He then lost by 5.50. Twice now he has lost a game his bench had already won.</p></section><section class="story"><div class="sh"><span class="si">&#128165;</span><span class="sk">Humbled</span><span class="st c12">maxhagler</span></div><p>Max was 3&ndash;0 and talking. Dan hung <b>150.48</b> on him, the fifth-biggest beating in Sleeper-era history, and held him to 84.62. Eight days ago Max led the league in scoring. He is now fourth.</p></section><section class="story"><div class="sh"><span class="si">&#128128;</span><span class="sk">Still winless</span><span class="st c11">Roughnecks</span></div><p>Joe is 0&ndash;4. He scored 103.96 this week, which would have beaten four teams, and lost anyway. At some point the schedule stops being an excuse and the roster starts being the problem.</p></section>
 
   <h2 class="disp">Standings</h2>
+  <p class="cap">Season to date &middot; Optimal is what every lineup would have scored if perfectly set</p>
   <div class="tablewrap"><table>
-    <thead><tr><th scope="col">Team</th><th scope="col">Record</th><th scope="col">Points for</th></tr></thead>
-    <tbody><tr><td class="c11">Uncle Rico</td><td><b>4&ndash;0</b></td><td>437.26</td></tr><tr><td class="c12">The Skin</td><td><b>3&ndash;1</b></td><td>490.38</td></tr><tr><td class="c12">maxhagler</td><td><b>3&ndash;1</b></td><td>465.62</td></tr><tr><td class="c11">YoSoyFiesta</td><td><b>3&ndash;1</b></td><td>463.28</td></tr><tr><td class="c11">scert</td><td><b>2&ndash;2</b></td><td>444.72</td></tr><tr><td class="c12">Table Smashers</td><td><b>2&ndash;2</b></td><td>443.50</td></tr><tr><td class="c11">Kids College Funds</td><td><b>2&ndash;2</b></td><td>417.32</td></tr><tr><td class="c11">Team bxkeegan</td><td><b>2&ndash;2</b></td><td>380.74</td></tr><tr><td class="c12">Cooking With Friends</td><td><b>1&ndash;3</b></td><td>404.02</td></tr><tr><td class="c12">vaught12</td><td><b>1&ndash;3</b></td><td>386.92</td></tr><tr><td class="c11">Win One for the Lipper</td><td><b>1&ndash;3</b></td><td>362.88</td></tr><tr><td class="c11">Roughnecks</td><td><b>0&ndash;4</b></td><td>358.50</td></tr></tbody>
+    <thead><tr><th scope="col">Team</th><th scope="col">Record</th><th scope="col">Points for</th><th scope="col">Points against</th><th scope="col">Optimal</th></tr></thead>
+    <tbody><tr><td class="c11">Uncle Rico</td><td><b>4&ndash;0</b></td><td>437.26</td><td class="dim">384.50</td><td class="opt">491.46</td></tr><tr><td class="c12">The Skin</td><td><b>3&ndash;1</b></td><td>490.38</td><td class="dim">390.88</td><td class="opt">504.38</td></tr><tr><td class="c12">maxhagler</td><td><b>3&ndash;1</b></td><td>465.62</td><td class="dim">463.74</td><td class="opt">560.52</td></tr><tr><td class="c11">YoSoyFiesta</td><td><b>3&ndash;1</b></td><td>463.28</td><td class="dim">380.88</td><td class="opt">497.76</td></tr><tr><td class="c11">scert</td><td><b>2&ndash;2</b></td><td>444.72</td><td class="dim">507.32</td><td class="opt">512.46</td></tr><tr><td class="c12">Table Smashers</td><td><b>2&ndash;2</b></td><td>443.50</td><td class="dim">432.22</td><td class="opt">478.20</td></tr><tr><td class="c11">Kids College Funds</td><td><b>2&ndash;2</b></td><td>417.32</td><td class="dim">394.24</td><td class="opt">470.32</td></tr><tr><td class="c11">Team bxkeegan</td><td><b>2&ndash;2</b></td><td>380.74</td><td class="dim">413.24</td><td class="opt">430.14</td></tr><tr><td class="c12">Cooking With Friends</td><td><b>1&ndash;3</b></td><td>404.02</td><td class="dim">421.00</td><td class="opt">448.62</td></tr><tr><td class="c12">vaught12</td><td><b>1&ndash;3</b></td><td>386.92</td><td class="dim">378.36</td><td class="opt">499.02</td></tr><tr><td class="c11">Win One for the Lipper</td><td><b>1&ndash;3</b></td><td>362.88</td><td class="dim">400.86</td><td class="opt">434.36</td></tr><tr><td class="c11">Roughnecks</td><td><b>0&ndash;4</b></td><td>358.50</td><td class="dim">487.90</td><td class="opt">389.30</td></tr></tbody>
   </table></div>
 
   <h2 class="disp">Who set their lineup</h2>

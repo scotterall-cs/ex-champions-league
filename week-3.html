@@ -72,6 +72,7 @@ li.g.cross{background:linear-gradient(90deg,transparent,rgba(72,132,206,.05))}
 .pn{font-size:15.5px}
 .pp{font-size:10px; color:var(--ink-3); letter-spacing:.06em}
 .pt{grid-column:2; font-size:10.5px; color:var(--ink-3); letter-spacing:.05em; text-transform:uppercase}
+td.opt{color:var(--ink-3); font-style:italic}
 .cap{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin:0 0 8px}
 table{border-collapse:collapse; width:100%; font-size:13px}
 th,td{text-align:left; padding:7px 12px; border-top:1px solid var(--rule); white-space:nowrap; font-variant-numeric:tabular-nums}
@@ -93,6 +94,10 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   li.g{grid-template-columns:1fr auto; row-gap:2px}
   li.g .gd{display:none} li.g .gm{grid-column:2; text-align:right}
   .eff li{grid-template-columns:104px 1fr 46px 42px}
+  table{font-size:11px}
+  th,td{padding:6px 7px}
+  th{font-size:9px; letter-spacing:.04em}
+  td:first-child{max-width:118px; overflow:hidden; text-overflow:ellipsis}
 }
 </style>
 </head>
@@ -134,9 +139,10 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   <section class="story"><div class="sh"><span class="si">&#128081;</span><span class="sk">Team of the week</span><span class="st c12">The Skin</span></div><p>148.28 &mdash; the highest score anyone has posted in 2026, and a 50-point beating of scert. Bijan Robinson 34.30, Brock Purdy 31.28, 97.0% of the available lineup started. Sam is 2&ndash;1 and second in the league in points.</p></section><section class="story"><div class="sh"><span class="si">&#127919;</span><span class="sk">Perfect week</span><span class="st c11">Win One for the Lipper</span></div><p>Tom scored <b>100.0%</b> of his optimal lineup &mdash; not one point left on the bench &mdash; and beat Detrick by 5.88 on Saquon Barkley&rsquo;s Monday night. Seven days after starting DJ Moore for &minus;0.10 while Mahomes and Kelce sat, he ran a flawless week. Nobody in this league has ever swung that far, that fast.</p></section><section class="story"><div class="sh"><span class="si">&#128128;</span><span class="sk">Rock bottom</span><span class="st c11">Roughnecks</span></div><p>Joe is 0&ndash;3, last in scoring at 254.54, and has not led a matchup at any point this season. Kids College Funds hung 124.88 on him for Armstrong&rsquo;s first win of the year.</p></section><section class="story"><div class="sh"><span class="si">&#128533;</span><span class="sk">Cruellest margin</span><span class="st c12">vaught12</span></div><p>Taylor lost by <b>1.56</b> with nobody left to play &mdash; his Sunday ended with a deficit and no Monday to fix it. That is the second sub-two-point loss in the league in two weeks, after Armstrong&rsquo;s 0.10.</p></section>
 
   <h2 class="disp">Standings</h2>
+  <p class="cap">Season to date &middot; Optimal is what every lineup would have scored if perfectly set</p>
   <div class="tablewrap"><table>
-    <thead><tr><th scope="col">Team</th><th scope="col">Record</th><th scope="col">Points for</th></tr></thead>
-    <tbody><tr><td class="c12">maxhagler</td><td><b>3&ndash;0</b></td><td>381.00</td></tr><tr><td class="c11">Uncle Rico</td><td><b>3&ndash;0</b></td><td>340.04</td></tr><tr><td class="c12">The Skin</td><td><b>2&ndash;1</b></td><td>359.86</td></tr><tr><td class="c11">YoSoyFiesta</td><td><b>2&ndash;1</b></td><td>312.80</td></tr><tr><td class="c11">Team bxkeegan</td><td><b>2&ndash;1</b></td><td>291.52</td></tr><tr><td class="c12">Table Smashers</td><td><b>1&ndash;2</b></td><td>335.14</td></tr><tr><td class="c11">Kids College Funds</td><td><b>1&ndash;2</b></td><td>320.64</td></tr><tr><td class="c11">scert</td><td><b>1&ndash;2</b></td><td>316.28</td></tr><tr><td class="c12">vaught12</td><td><b>1&ndash;2</b></td><td>295.74</td></tr><tr><td class="c11">Win One for the Lipper</td><td><b>1&ndash;2</b></td><td>285.40</td></tr><tr><td class="c12">Cooking With Friends</td><td><b>1&ndash;2</b></td><td>281.10</td></tr><tr><td class="c11">Roughnecks</td><td><b>0&ndash;3</b></td><td>254.54</td></tr></tbody>
+    <thead><tr><th scope="col">Team</th><th scope="col">Record</th><th scope="col">Points for</th><th scope="col">Points against</th><th scope="col">Optimal</th></tr></thead>
+    <tbody><tr><td class="c12">maxhagler</td><td><b>3&ndash;0</b></td><td>381.00</td><td class="dim">313.26</td><td class="opt">469.10</td></tr><tr><td class="c11">Uncle Rico</td><td><b>3&ndash;0</b></td><td>340.04</td><td class="dim">307.02</td><td class="opt">372.94</td></tr><tr><td class="c12">The Skin</td><td><b>2&ndash;1</b></td><td>359.86</td><td class="dim">301.66</td><td class="opt">373.86</td></tr><tr><td class="c11">YoSoyFiesta</td><td><b>2&ndash;1</b></td><td>312.80</td><td class="dim">296.26</td><td class="opt">342.88</td></tr><tr><td class="c11">Team bxkeegan</td><td><b>2&ndash;1</b></td><td>291.52</td><td class="dim">282.72</td><td class="opt">319.62</td></tr><tr><td class="c12">Table Smashers</td><td><b>1&ndash;2</b></td><td>335.14</td><td class="dim">328.26</td><td class="opt">367.34</td></tr><tr><td class="c11">Kids College Funds</td><td><b>1&ndash;2</b></td><td>320.64</td><td class="dim">303.06</td><td class="opt">368.74</td></tr><tr><td class="c11">scert</td><td><b>1&ndash;2</b></td><td>316.28</td><td class="dim">384.40</td><td class="opt">371.62</td></tr><tr><td class="c12">vaught12</td><td><b>1&ndash;2</b></td><td>295.74</td><td class="dim">281.68</td><td class="opt">361.34</td></tr><tr><td class="c11">Win One for the Lipper</td><td><b>1&ndash;2</b></td><td>285.40</td><td class="dim">303.64</td><td class="opt">348.48</td></tr><tr><td class="c12">Cooking With Friends</td><td><b>1&ndash;2</b></td><td>281.10</td><td class="dim">292.56</td><td class="opt">313.20</td></tr><tr><td class="c11">Roughnecks</td><td><b>0&ndash;3</b></td><td>254.54</td><td class="dim">379.54</td><td class="opt">281.44</td></tr></tbody>
   </table></div>
 
   <h2 class="disp">Who set their lineup</h2>

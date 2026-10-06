@@ -72,6 +72,7 @@ li.g.cross{background:linear-gradient(90deg,transparent,rgba(72,132,206,.05))}
 .pn{font-size:15.5px}
 .pp{font-size:10px; color:var(--ink-3); letter-spacing:.06em}
 .pt{grid-column:2; font-size:10.5px; color:var(--ink-3); letter-spacing:.05em; text-transform:uppercase}
+td.opt{color:var(--ink-3); font-style:italic}
 .cap{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin:0 0 8px}
 table{border-collapse:collapse; width:100%; font-size:13px}
 th,td{text-align:left; padding:7px 12px; border-top:1px solid var(--rule); white-space:nowrap; font-variant-numeric:tabular-nums}
@@ -93,6 +94,10 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   li.g{grid-template-columns:1fr auto; row-gap:2px}
   li.g .gd{display:none} li.g .gm{grid-column:2; text-align:right}
   .eff li{grid-template-columns:104px 1fr 46px 42px}
+  table{font-size:11px}
+  th,td{padding:6px 7px}
+  th{font-size:9px; letter-spacing:.04em}
+  td:first-child{max-width:118px; overflow:hidden; text-overflow:ellipsis}
 }
 </style>
 </head>
@@ -134,9 +139,10 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   <section class="story"><div class="sh"><span class="si">&#128148;</span><span class="sk">The tenth of a point</span><span class="st c11">Kids College Funds</span></div><p>Armstrong lost by <b>0.10</b>. He ran a 94.7% lineup &mdash; second best in the league &mdash; and his defense went for 26. His 118.46 would have beaten nine of the twelve teams this week. He lost because Max scored 118.56. Kids College Funds is 0&ndash;2 with more points than four teams that have a win.</p></section><section class="story"><div class="sh"><span class="si">&#128081;</span><span class="sk">Team of the week</span><span class="st c12">Table Smashers</span></div><p>98.3% efficient, 1.90 points left on the bench all week. Jaxon Smith-Njigba 38.00, Amon-Ra St. Brown 30.70. Tyler did not put a foot wrong and buried Brian by 36.</p></section><section class="story"><div class="sh"><span class="si">&#129313;</span><span class="sk">Lineup crime</span><span class="st c11">Win One for the Lipper</span></div><p>64.7% efficient &mdash; the worst week anyone has managed all season. Patrick Mahomes scored 28.98 on the bench while Lamar Jackson started for 15.80. Travis Kelce scored 20.60 on the bench. DJ Moore started and scored &minus;0.10. Bowden lost by 12.68; starting Mahomes alone wins it.</p></section><section class="story"><div class="sh"><span class="si">&#128558;</span><span class="sk">How did he win</span><span class="st c12">maxhagler</span></div><p>Max won by a tenth of a point with Davante Adams and 35.50 sitting on his bench. Swapping Adams in for Jalen Coker turns a squeaker into a 25-point beating. He is 2&ndash;0 and leads the league in scoring having managed 76.6% of his own roster.</p></section>
 
   <h2 class="disp">Standings</h2>
+  <p class="cap">Season to date &middot; Optimal is what every lineup would have scored if perfectly set</p>
   <div class="tablewrap"><table>
-    <thead><tr><th scope="col">Team</th><th scope="col">Record</th><th scope="col">Points for</th></tr></thead>
-    <tbody><tr><td class="c12">maxhagler</td><td><b>2&ndash;0</b></td><td>260.98</td></tr><tr><td class="c11">Uncle Rico</td><td><b>2&ndash;0</b></td><td>234.18</td></tr><tr><td class="c11">YoSoyFiesta</td><td><b>2&ndash;0</b></td><td>219.16</td></tr><tr><td class="c12">Table Smashers</td><td><b>1&ndash;1</b></td><td>242.44</td></tr><tr><td class="c11">scert</td><td><b>1&ndash;1</b></td><td>218.58</td></tr><tr><td class="c12">The Skin</td><td><b>1&ndash;1</b></td><td>211.58</td></tr><tr><td class="c12">vaught12</td><td><b>1&ndash;1</b></td><td>191.44</td></tr><tr><td class="c11">Team bxkeegan</td><td><b>1&ndash;1</b></td><td>183.64</td></tr><tr><td class="c12">Cooking With Friends</td><td><b>1&ndash;1</b></td><td>181.94</td></tr><tr><td class="c11">Kids College Funds</td><td><b>0&ndash;2</b></td><td>195.76</td></tr><tr><td class="c11">Win One for the Lipper</td><td><b>0&ndash;2</b></td><td>180.36</td></tr><tr><td class="c11">Roughnecks</td><td><b>0&ndash;2</b></td><td>177.90</td></tr></tbody>
+    <thead><tr><th scope="col">Team</th><th scope="col">Record</th><th scope="col">Points for</th><th scope="col">Points against</th><th scope="col">Optimal</th></tr></thead>
+    <tbody><tr><td class="c12">maxhagler</td><td><b>2&ndash;0</b></td><td>260.98</td><td class="dim">220.56</td><td class="opt">344.68</td></tr><tr><td class="c11">Uncle Rico</td><td><b>2&ndash;0</b></td><td>234.18</td><td class="dim">202.72</td><td class="opt">257.88</td></tr><tr><td class="c11">YoSoyFiesta</td><td><b>2&ndash;0</b></td><td>219.16</td><td class="dim">188.38</td><td class="opt">241.42</td></tr><tr><td class="c12">Table Smashers</td><td><b>1&ndash;1</b></td><td>242.44</td><td class="dim">208.24</td><td class="opt">249.44</td></tr><tr><td class="c11">scert</td><td><b>1&ndash;1</b></td><td>218.58</td><td class="dim">236.12</td><td class="opt">254.68</td></tr><tr><td class="c12">The Skin</td><td><b>1&ndash;1</b></td><td>211.58</td><td class="dim">203.96</td><td class="opt">220.98</td></tr><tr><td class="c12">vaught12</td><td><b>1&ndash;1</b></td><td>191.44</td><td class="dim">175.82</td><td class="opt">252.04</td></tr><tr><td class="c11">Team bxkeegan</td><td><b>1&ndash;1</b></td><td>183.64</td><td class="dim">189.08</td><td class="opt">199.44</td></tr><tr><td class="c12">Cooking With Friends</td><td><b>1&ndash;1</b></td><td>181.94</td><td class="dim">187.52</td><td class="opt">206.34</td></tr><tr><td class="c11">Kids College Funds</td><td><b>0&ndash;2</b></td><td>195.76</td><td class="dim">226.42</td><td class="opt">222.86</td></tr><tr><td class="c11">Win One for the Lipper</td><td><b>0&ndash;2</b></td><td>180.36</td><td class="dim">204.48</td><td class="opt">243.44</td></tr><tr><td class="c11">Roughnecks</td><td><b>0&ndash;2</b></td><td>177.90</td><td class="dim">254.66</td><td class="opt">194.10</td></tr></tbody>
   </table></div>
 
   <h2 class="disp">Who set their lineup</h2>
