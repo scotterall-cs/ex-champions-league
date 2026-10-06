@@ -85,6 +85,14 @@ th{font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--i
   font-size:38px; line-height:.9; margin-top:7px; font-variant-numeric:tabular-nums}
 .warn2{font-size:13px; color:var(--ink-2); margin-top:7px}
 .dash{color:var(--ink-3); font-weight:500; font-size:.75em}
+.nw{border-left:3px solid var(--rule-strong); padding:2px 0 2px 18px; margin:0 0 20px}
+.nw:nth-of-type(odd){border-left-color:var(--c11)}
+.nw:nth-of-type(even){border-left-color:var(--c12)}
+.nwh{display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; margin-bottom:6px}
+.nwt{font-size:15px; font-weight:600}
+.nwv{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3)}
+.nwr{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.05em; color:var(--ink-3)}
+.nw p{margin:0; font-size:16px; color:var(--ink-2); max-width:62ch}
 footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.05em; color:var(--ink-3); line-height:1.8}
 @media (max-width:660px){
@@ -175,11 +183,8 @@ footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   </div>
 
   <h2 class="disp">Next week</h2>
-  <div class="story" style="border-left-color:var(--rule-strong)">
-    <p>Max and Greg are both 3&ndash;0 and do not play each other until later in the year. Joe is 0&ndash;3 and bottom of the
-    scoring table, which is a harder hole than it looks three weeks in. And &rsquo;12&rsquo;s lead in the class war is down
-    to a single game with the schedule about to turn.</p>
-  </div>
+  <p class="cap">Three of the six are cross-class, with the season series tied 8&ndash;8</p>
+  <div class="nw"><div class="nwh"><span class="nwt c12">maxhagler</span><span class="nwv">v</span><span class="nwt c12">The Skin</span><span class="nwr">Max 3&ndash;1 vs Sam 3&ndash;1</span></div><p>The best two teams in 2012 play each other. Sam leads the league in points, Max leads 2012 in volume, and the loser drops behind three &rsquo;11 teams in the standings. Whoever wins gets to do the talking.</p></div><div class="nw"><div class="nwh"><span class="nwt c11">scert</span><span class="nwv">v</span><span class="nwt c11">Uncle Rico</span><span class="nwr">Scott 2&ndash;2 vs Greg 4&ndash;0</span></div><p>Greg&rsquo;s twelve-game winning streak finally meets someone who is not in the bottom half. Scott has the highest career scoring average in the league at 116.16. If the streak is real it survives this; if it is a schedule artefact, we find out on Sunday.</p></div><div class="nw"><div class="nwh"><span class="nwt c12">vaught12</span><span class="nwv">v</span><span class="nwt c11">Win One for the Lipper</span><span class="nwr">Taylor 1&ndash;3 vs Tom 1&ndash;3</span></div><p>The season&rsquo;s most and third-most wasteful managers, head to head, both 1&ndash;3. Between them they have abandoned <b>183.58</b> points on their benches in four weeks &mdash; more than any single team has scored in a week all year. Somebody has to win this, which is the funniest sentence in the newsletter.</p></div><div class="nw"><div class="nwh"><span class="nwt c11">Roughnecks</span><span class="nwv">v</span><span class="nwt c11">YoSoyFiesta</span><span class="nwr">Joe 0&ndash;4 vs Dan 3&ndash;1</span></div><p>Joe is winless and drawn against the man who just hung 150.48 on Max. 0&ndash;5 is live.</p></div>
 
   <footer>Source: Sleeper API, pulled 6 October 2026. Efficiency is points scored as a share of the highest-scoring legal lineup that roster could have started.</footer>
 </div>
