@@ -31,36 +31,96 @@ TITLES=[("Dan",3,"2015, 2019, 2024"),("Tyler",3,"2016, 2017, 2023"),("Detrick",2
         ("Armstrong",1,"2018"),("Scott",1,"2021"),("Taylor",1,"2022"),("Greg",1,"2025")]
 NOTITLE=["Brian","Joe","Max","Sam","Tom"]
 
-STAND=[("YoSoyFiesta","Dan",22,12,3764.3,3334.9,110.71),("Uncle Rico","Greg",22,12,3640.7,3217.5,107.08),
- ("Table Smashers","Tyler",20,14,3755.5,3490.9,110.46),("scert","Scott",18,16,3912.0,3735.8,115.06),
- ("maxhagler","Max",18,16,3493.1,3539.5,102.74),("vaught12","Taylor",18,16,3486.2,3508.7,102.53),
- ("Roughnecks","Joe",17,17,3574.1,3573.3,105.12),("Kids College Funds","Armstrong",17,17,3570.3,3712.5,105.01),
- ("The Skin","Sam",14,20,3478.6,3660.0,102.31),("Team bxkeegan","Brian",14,20,3178.1,3484.8,93.47),
- ("Win One for the Lipper","Tom",13,21,3371.6,3579.7,99.17),("Cooking With Friends","Detrick",11,23,3181.8,3568.7,93.58)]
-
-BEST=[(167.86,"2025","12","Table Smashers"),(156.70,"2026","5","Uncle Rico"),
- (154.64,"2024","11","maxhagler"),(154.16,"2024","2","scert"),
- (153.38,"2024","11","Table Smashers"),(152.82,"2025","8","Roughnecks")]
-WORST=[(27.50,"2025","12","Team bxkeegan"),(42.64,"2024","2","Cooking With Friends"),(48.10,"2025","11","Team bxkeegan"),
- (52.28,"2025","14","Team bxkeegan"),(52.62,"2025","6","Cooking With Friends"),(54.40,"2025","10","Team bxkeegan")]
+STAND=[("Uncle Rico","Greg",24,12,3879.9,3347.5,107.78),
+ ("Table Smashers","Tyler",22,14,3992.6,3653.8,110.90),
+ ("YoSoyFiesta","Dan",22,14,3948.8,3562.7,109.69),
+ ("scert","Scott",19,17,4089.5,3944.6,113.60),
+ ("maxhagler","Max",19,17,3710.5,3715.9,103.07),
+ ("vaught12","Taylor",19,17,3674.5,3705.9,102.07),
+ ("Kids College Funds","Armstrong",18,18,3822.9,3929.4,106.19),
+ ("Roughnecks","Joe",17,19,3694.3,3819.2,102.62),
+ ("Team bxkeegan","Brian",16,20,3358.5,3597.7,93.29),
+ ("The Skin","Sam",15,21,3644.9,3853.5,101.25),
+ ("Win One for the Lipper","Tom",13,23,3476.7,3784.2,96.58),
+ ("Cooking With Friends","Detrick",12,24,3421.4,3800.2,95.04)]
+BEST=[(167.86,"2025","12","Table Smashers"),
+ (156.70,"2026","5","Uncle Rico"),
+ (154.64,"2024","11","maxhagler"),
+ (154.16,"2024","2","scert"),
+ (153.56,"2026","8","Kids College Funds"),
+ (153.38,"2024","11","Table Smashers")]
+WORST=[(27.50,"2025","12","Team bxkeegan"),
+ (42.26,"2026","8","Roughnecks"),
+ (42.64,"2024","2","Cooking With Friends"),
+ (48.10,"2025","11","Team bxkeegan"),
+ (49.50,"2026","7","Win One for the Lipper"),
+ (52.28,"2025","14","Team bxkeegan")]
 BLOW=[(97.04,"2025","12","Table Smashers",167.86,"Kids College Funds",70.82),
  (95.52,"2025","10","scert",149.92,"Team bxkeegan",54.40),
  (91.82,"2025","12","Uncle Rico",119.32,"Team bxkeegan",27.50),
- (68.16,"2024","2","vaught12",110.80,"Cooking With Friends",42.64),
- (65.86,"2026","4","YoSoyFiesta",150.48,"maxhagler",84.62)]
+ (76.20,"2026","8","Uncle Rico",118.46,"Roughnecks",42.26),
+ (74.02,"2026","8","maxhagler",129.62,"Win One for the Lipper",55.60)]
 CLOSE=[(0.10,"2026","2","maxhagler",118.56,"Kids College Funds",118.46),
  (0.46,"2025","8","Uncle Rico",115.42,"Table Smashers",114.96),
  (0.64,"2024","6","Uncle Rico",112.80,"Kids College Funds",112.16),
  (0.68,"2024","14","scert",145.68,"YoSoyFiesta",145.00),
  (0.94,"2024","9","Team bxkeegan",115.70,"Table Smashers",114.76)]
-STREAK=[("Uncle Rico","Greg",14,4),("YoSoyFiesta","Dan",7,3),("Roughnecks","Joe",6,5),
- ("Table Smashers","Tyler",5,2),("Kids College Funds","Armstrong",5,6),("maxhagler","Max",5,6),
- ("vaught12","Taylor",5,3),("The Skin","Sam",4,5),("Team bxkeegan","Brian",4,7),
- ("Win One for the Lipper","Tom",4,4),("Cooking With Friends","Detrick",3,9),("scert","Scott",3,3)]
-EFF=[("Table Smashers","Tyler",92.0,325.8,2),("scert","Scott",91.7,351.9,5),("YoSoyFiesta","Dan",91.6,344.0,5),
- ("Roughnecks","Joe",90.3,383.7,2),("Cooking With Friends","Detrick",89.3,379.4,4),("vaught12","Taylor",89.2,420.9,2),
- ("Uncle Rico","Greg",88.9,453.7,2),("Win One for the Lipper","Tom",88.9,420.9,5),("The Skin","Sam",87.4,503.5,3),
- ("maxhagler","Max",87.0,522.5,1),("Kids College Funds","Armstrong",86.6,553.7,3),("Team bxkeegan","Brian",86.1,512.8,1)]
+STREAK=[("Uncle Rico","Greg",16,4),
+ ("YoSoyFiesta","Dan",7,3),
+ ("Roughnecks","Joe",6,5),
+ ("Table Smashers","Tyler",5,2),
+ ("Kids College Funds","Armstrong",5,6),
+ ("maxhagler","Max",5,6),
+ ("vaught12","Taylor",5,3),
+ ("The Skin","Sam",4,5),
+ ("Team bxkeegan","Brian",4,7),
+ ("Win One for the Lipper","Tom",4,5),
+ ("Cooking With Friends","Detrick",3,9),
+ ("scert","Scott",3,3)]
+EFF=[("scert","Scott",91.6,373.5,5),
+ ("Table Smashers","Tyler",91.5,370.7,3),
+ ("YoSoyFiesta","Dan",91.2,380.5,5),
+ ("Roughnecks","Joe",89.9,414.7,2),
+ ("Cooking With Friends","Detrick",89.8,390.6,4),
+ ("vaught12","Taylor",89.5,431.0,3),
+ ("Uncle Rico","Greg",89.4,462.3,2),
+ ("Win One for the Lipper","Tom",88.2,466.5,5),
+ ("The Skin","Sam",87.5,522.2,3),
+ ("Kids College Funds","Armstrong",86.7,588.5,3),
+ ("maxhagler","Max",86.6,572.5,1),
+ ("Team bxkeegan","Brian",86.0,547.2,1)]
+
+# --- DERIVED HEADER FACTS -------------------------------------------------
+# These were typed once and then rotted: the page said "Forty games each" when
+# it was 34, and the footer claimed coverage "through week 1 of 2026". Anything
+# that restates a number in words is computed here instead.
+THRU_WEEK = 8
+GAMES_EACH = 36
+DATED = "9 November 2026"
+
+def _eff_para():
+    """The efficiency verdict. Tyler led for weeks; at week 8 Scott passed him."""
+    top, second = EFF[0], EFF[1]
+    gap = round(top[2] - second[2], 1)
+    if gap == 0.0:   rel = "is level with him"
+    elif gap == 0.1: rel = "is a tenth of a point behind"
+    else:            rel = "is %.1f points behind" % gap
+    fewest = min(EFF, key=lambda r: r[3])
+    # the bench leader is often the same man as the runner-up; don't name him twice
+    if fewest[1] == second[1]:   bench = "and has left the fewest points on the bench (%.1f)" % fewest[3]
+    elif fewest[1] == top[1]:    bench = "and leads on bench waste too (%.1f)" % fewest[3]
+    else:                        bench = "while %s has left the fewest points on the bench (%.1f)" % (fewest[1], fewest[3])
+    best = max(r[4] for r in EFF)
+    who = [r[1] for r in EFF if r[4] == best]
+    names = who[0] if len(who) == 1 else ", ".join(who[:-1]) + " and " + who[-1]
+    W = {1:"one",2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven"}
+    return ("<strong>%s manages better than anyone</strong> &mdash; %.1f%% career efficiency "
+            "across %d games. %s %s him, %s. "
+            "%s %s on perfect weeks with %s each." % (
+                top[1], top[2], GAMES_EACH, second[1], rel, bench,
+                names, "lead" if len(who) > 1 else "leads", W.get(best, str(best))))
+EFF_PARA = _eff_para()
+
 BADWK=[(44.5,"2025","12","Team bxkeegan",27.50,61.80),(49.5,"2025","6","Team bxkeegan",57.16,115.36),
  (59.6,"2025","10","Team bxkeegan",54.40,91.20),(64.3,"2025","9","Kids College Funds",78.32,121.82),
  (65.3,"2025","4","maxhagler",71.58,109.66),(66.1,"2026","1","vaught12",79.20,119.76)]
@@ -254,7 +314,7 @@ footer{{margin-top:46px; padding-top:16px; border-top:1px solid var(--rule);
   <p class="none">Still waiting: {", ".join(NOTITLE)}.</p>
 
   <h2 class="disp">All-time record</h2>
-  <p class="sub-h">Sleeper era only &mdash; 2024, 2025 and 2026 through week 6, the seasons with surviving game-by-game results. Forty games each.</p>
+  <p class="sub-h">Sleeper era only &mdash; 2024, 2025 and 2026 through week {THRU_WEEK}, the seasons with surviving game-by-game results. {GAMES_EACH} games each.</p>
   <div class="tablewrap"><table>
     <thead><tr><th scope="col">Team</th><th scope="col">Manager</th><th scope="col">W&ndash;L</th>
     <th scope="col">Points for</th><th scope="col">Points against</th><th scope="col">Avg</th></tr></thead>
@@ -305,11 +365,11 @@ footer{{margin-top:46px; padding-top:16px; border-top:1px solid var(--rule);
     <p><strong>Greg has the longest win streak of the Sleeper era, at fourteen and counting.</strong> The easiest schedule ever played (88.99 a week, 2017) belongs to Drew Jacoby &mdash; whose franchise Greg took over in 2019.</p>
     <p><strong>Brian owns the floor.</strong> The three lowest scores of the Sleeper era are all his, including a 27.50 in week 12 of 2025 &mdash; from a roster that could have started 61.80.</p>
     <p><strong>Detrick has two rings and the worst losing streak on record.</strong> Champion in 2014 and 2020, then nine straight defeats. <strong>Sam owns the other end</strong> &mdash; 13 losses in 2014 is still the most in a single season.</p>
-    <p><strong>Tyler manages better than anyone</strong> &mdash; 91.8% career efficiency and the fewest points left on the bench. Scott sits two tenths behind him, but has four perfect weeks to Tyler&rsquo;s one.</p><p><strong>The closest game in Sleeper history happened this season.</strong> Max beat Armstrong by <b>0.10</b> in week 2 of 2026, with Davante Adams and 35.50 sitting on Max&rsquo;s bench.</p>
+    <p>{EFF_PARA}</p><p><strong>The closest game in Sleeper history happened this season.</strong> Max beat Armstrong by <b>0.10</b> in week 2 of 2026, with Davante Adams and 35.50 sitting on Max&rsquo;s bench.</p>
   </div>
 
-  <footer>Sleeper-era figures cover 2024, 2025 and week 1 of 2026. Yahoo figures cover 2014&ndash;2023 and include the predecessor league.<br>
-  Sources: Yahoo Fantasy archive and Record Book, Sigmach Fantasy Football.xlsx, and the Sleeper API. Updated 20 October 2026.</footer>
+  <footer>Sleeper-era figures cover 2024, 2025 and 2026 through week {THRU_WEEK}. Yahoo figures cover 2014&ndash;2023 and include the predecessor league.<br>
+  Sources: Yahoo Fantasy archive and Record Book, Sigmach Fantasy Football.xlsx, and the Sleeper API. Updated {DATED}.</footer>
 </div>
 '''
 publish("record-book.html", HTML)

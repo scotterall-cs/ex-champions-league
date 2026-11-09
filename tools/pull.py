@@ -6,7 +6,7 @@ Emits every data block for a given week, ready to paste into the generators.
 
 Nothing here is typed by hand. Paste the output into:
   tools/recap.py      GAMES, STAND, EFF, TOP, DUDS, CLASS_WK/PPG/SEASON/ALLTIME
-  tools/recordbook.py STAND, BEST, BLOW, STREAK, EFF
+  tools/recordbook.py STAND, BEST, WORST, BLOW, STREAK, EFF, THRU_WEEK, GAMES_EACH
   tools/build.py      the 2026 SEASONS row
 Then write STORIES / CALLOUT / NEXTWEEK prose yourself and run the generators.
 """
@@ -168,10 +168,14 @@ for i, (r, v) in enumerate(sorted(rec.items(), key=lambda kv: (-kv[1][0], -kv[1]
 print("]")
 
 print()
-print("=" * 72); print("recordbook.py  BEST / BLOW / STREAK / EFF"); print("=" * 72)
+print("=" * 72); print("recordbook.py  BEST / WORST / BLOW / STREAK / EFF"); print("=" * 72)
 print("BEST=[", end="")
 for i, (p, s, w, r) in enumerate(sorted(tw, reverse=True)[:6]):
     print('%s(%.2f,"%s","%d","%s")' % ("" if i == 0 else ",\n ", p, s, w, TEAM[r]), end="")
+print("]")
+print("WORST=[", end="")
+for i, (p, s_, w, r) in enumerate(sorted(tw)[:6]):
+    print('%s(%.2f,"%s","%d","%s")' % ("" if i == 0 else ",\n ", p, s_, w, TEAM[r]), end="")
 print("]")
 print("BLOW=[", end="")
 for i, (m, s, w, hr, hp, lr, lp) in enumerate(sorted(games, reverse=True)[:5]):
@@ -195,6 +199,11 @@ for i, r in enumerate(sorted(act, key=lambda r: -act[r] / opts[r])):
     print('%s("%s","%s",%.1f,%.1f,%d)' % ("" if i == 0 else ",\n ",
           TEAM[r], WHO[r], act[r] / opts[r] * 100, opts[r] - act[r], perf[r]), end="")
 print("]")
+
+print()
+print("=" * 72); print("recordbook.py / build.py  header constants"); print("=" * 72)
+print("THRU_WEEK = %d          # 'through week N' notes derive from this" % WEEK)
+print("GAMES_EACH = %d         # all-time games played per team" % (rec[1][0] + rec[1][1]))
 
 print()
 print("=" * 72); print("NEXT WEEK schedule (week %d) — NEVER type these, copy them" % (WEEK + 1)); print("=" * 72)

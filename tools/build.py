@@ -35,7 +35,7 @@ SEASONS = [
  ("2023","Yahoo","Tyler",T,[("Tyler",T),("Greg",E),("Joe",E),("Armstrong",E),("Brian",E),("Max",T)],None,None,"m"),
  ("2024","Sleeper","Dan",E,[("Dan",E),("Taylor",T),("Max",T),("Scott",E),("Tyler",T),("Brian",E)],(25,19),(106.81,105.68),"m"),
  ("2025","Sleeper","Greg",E,[("Greg",E),("Joe",E),("Dan",E),("Scott",E),("Tyler",T),("Armstrong",E)],(16,28),(96.21,105.35),"m"),
- ("2026","Sleeper",None,None,None,(9,11),(106.14,103.08),"m"),
+ ("2026","Sleeper",None,None,None,(14,14),(105.82,99.80),"m"),
 ]
 CLASSOF={"Tyler":T,"Max":T,"Sam":T,"Taylor":T,"Detrick":T,"Armstrong":E,"Scott":E,"Joe":E,"Dan":E,"Greg":E,"Tom":E,"Brian":E}
 
@@ -71,11 +71,12 @@ for s,plat,ch,cc,pd,hh,ppg,era in SEASONS:
       <div class="evid">{evid}</div>
     </li>''')
 
+THRU_WEEK = 8        # derived from pull.py, not typed
 hbars=[]
 for s,plat,ch,cc,pd,hh,ppg,era in SEASONS:
     if not hh: continue
     tw,ew=hh; tot=tw+ew
-    note=" &middot; through week 6" if s=="2026" else ""
+    note=f" &middot; through week {THRU_WEEK}" if s=="2026" else ""
     hbars.append(f'''      <div class="hrow">
         <div class="hyr">{s}<span class="hnote">{note}</span></div>
         <div class="hbarwrap">

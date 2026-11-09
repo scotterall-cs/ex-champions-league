@@ -6,6 +6,7 @@ Everything needed to produce a week's recap lives in this repo. Run it every Tue
 
 ```bash
 python tools/pull.py <week>          # emits every data block, ready to paste
+#   incl. WORST (lowest scores ever) and THRU_WEEK / GAMES_EACH for the headers
 # paste the blocks into tools/recap.py, tools/recordbook.py, tools/build.py
 # add the week's one-line summary to tools/weeks.json
 python tools/build.py                # -> 2011-vs-2012.html
@@ -26,6 +27,7 @@ Before starting, confirm the week is actually final: `tools/pull.py` warns if th
 
 - **`STORIES`** in `recap.py` — four items, `(emoji, kicker, team, body)`. The subject must be a team name from the roster map, or any string if the story covers more than one team (the colour falls back to neutral).
 - **`CALLOUT`** — the Roughnecks corner. See below.
+- Superlatives. `pull.py` gives you ranked lists &mdash; read them rather than trusting memory.
 - **`NEXTWEEK`** — four previewed matchups. **Copy the pairings from the bottom of `pull.py` output. Never type them from memory.** `recap.py` fetches the real schedule and aborts if a previewed matchup does not exist.
 - The one-line week summary in `tools/weeks.json`.
 
@@ -58,6 +60,9 @@ A highlighted box about **Joe (Roughnecks)**, warm and tongue-in-cheek, tagged "
 - **A dead check passed silently** — `verify.py` now fails any check that matches zero rows.
 - **Sleeper renames players** ("James Cook" became "James Cook III" mid-season), so `verify.py` compares names with suffixes stripped.
 - Several stats were wrong on first draft and only caught by checking: a score that "beat four teams" had beaten six; a combined total of "117" was 183.58.
+- **`verify.py` cannot check a superlative.** It proves every number is real; it has no idea whether "the fewest in the league" or "the best start ever" is true. Weeks 7 and 8 each shipped a draft with a wrong superlative that passed the gate clean: Greg was called the league's stingiest defence when Brian had conceded less, and a bench total was said to beat eight teams' scores when it beat one. **Rank the list yourself before writing "most", "fewest", "first" or "second-lowest".**
+- **Typed header prose rots silently.** The record book claimed "Forty games each" when it was 34, and a footer covering "week 1 of 2026" survived seven weeks. Those strings are now derived from `THRU_WEEK` and `GAMES_EACH`, which `pull.py` emits. Never type them again.
+- **The efficiency verdict changes hands.** The record book hardcoded "Tyler manages better than anyone" and stayed wrong after Scott passed him in week 8. It is now computed from `EFF`.
 
 ## Roster map
 
