@@ -31,18 +31,18 @@ TITLES=[("Dan",3,"2015, 2019, 2024"),("Tyler",3,"2016, 2017, 2023"),("Detrick",2
         ("Armstrong",1,"2018"),("Scott",1,"2021"),("Taylor",1,"2022"),("Greg",1,"2025")]
 NOTITLE=["Brian","Joe","Max","Sam","Tom"]
 
-STAND=[("Uncle Rico","Greg",24,12,3879.9,3347.5,107.78),
- ("Table Smashers","Tyler",22,14,3992.6,3653.8,110.90),
- ("YoSoyFiesta","Dan",22,14,3948.8,3562.7,109.69),
- ("scert","Scott",19,17,4089.5,3944.6,113.60),
- ("maxhagler","Max",19,17,3710.5,3715.9,103.07),
- ("vaught12","Taylor",19,17,3674.5,3705.9,102.07),
- ("Kids College Funds","Armstrong",18,18,3822.9,3929.4,106.19),
- ("Roughnecks","Joe",17,19,3694.3,3819.2,102.62),
- ("Team bxkeegan","Brian",16,20,3358.5,3597.7,93.29),
- ("The Skin","Sam",15,21,3644.9,3853.5,101.25),
- ("Win One for the Lipper","Tom",13,23,3476.7,3784.2,96.58),
- ("Cooking With Friends","Detrick",12,24,3421.4,3800.2,95.04)]
+STAND=[("Uncle Rico","Greg",24,13,3968.5,3450.3,107.26),
+ ("Table Smashers","Tyler",22,15,4085.5,3769.8,110.42),
+ ("YoSoyFiesta","Dan",22,15,4054.8,3681.8,109.59),
+ ("maxhagler","Max",20,17,3823.3,3802.6,103.33),
+ ("vaught12","Taylor",20,17,3796.1,3781.6,102.60),
+ ("scert","Scott",19,18,4176.3,4057.4,112.87),
+ ("Kids College Funds","Armstrong",19,18,3925.7,4018.0,106.10),
+ ("Roughnecks","Joe",17,20,3756.9,3899.4,101.54),
+ ("The Skin","Sam",16,21,3764.0,3959.5,101.73),
+ ("Team bxkeegan","Brian",16,21,3434.2,3719.3,92.82),
+ ("Win One for the Lipper","Tom",14,23,3556.9,3846.8,96.13),
+ ("Cooking With Friends","Detrick",13,24,3537.4,3893.1,95.61)]
 BEST=[(167.86,"2025","12","Table Smashers"),
  (156.70,"2026","5","Uncle Rico"),
  (154.64,"2024","11","maxhagler"),
@@ -66,7 +66,7 @@ CLOSE=[(0.10,"2026","2","maxhagler",118.56,"Kids College Funds",118.46),
  (0.68,"2024","14","scert",145.68,"YoSoyFiesta",145.00),
  (0.94,"2024","9","Team bxkeegan",115.70,"Table Smashers",114.76)]
 STREAK=[("Uncle Rico","Greg",16,4),
- ("YoSoyFiesta","Dan",7,3),
+ ("YoSoyFiesta","Dan",7,4),
  ("Roughnecks","Joe",6,5),
  ("Table Smashers","Tyler",5,2),
  ("Kids College Funds","Armstrong",5,6),
@@ -77,26 +77,25 @@ STREAK=[("Uncle Rico","Greg",16,4),
  ("Win One for the Lipper","Tom",4,5),
  ("Cooking With Friends","Detrick",3,9),
  ("scert","Scott",3,3)]
-EFF=[("scert","Scott",91.6,373.5,5),
- ("Table Smashers","Tyler",91.5,370.7,3),
- ("YoSoyFiesta","Dan",91.2,380.5,5),
- ("Roughnecks","Joe",89.9,414.7,2),
- ("Cooking With Friends","Detrick",89.8,390.6,4),
- ("vaught12","Taylor",89.5,431.0,3),
- ("Uncle Rico","Greg",89.4,462.3,2),
- ("Win One for the Lipper","Tom",88.2,466.5,5),
- ("The Skin","Sam",87.5,522.2,3),
- ("Kids College Funds","Armstrong",86.7,588.5,3),
- ("maxhagler","Max",86.6,572.5,1),
- ("Team bxkeegan","Brian",86.0,547.2,1)]
-
+EFF=[("scert","Scott",91.7,377.7,5),
+ ("Table Smashers","Tyler",91.6,376.1,3),
+ ("YoSoyFiesta","Dan",91.3,387.1,5),
+ ("Cooking With Friends","Detrick",89.9,398.2,4),
+ ("Roughnecks","Joe",89.8,425.5,2),
+ ("vaught12","Taylor",89.8,432.1,3),
+ ("Uncle Rico","Greg",89.5,466.4,2),
+ ("Win One for the Lipper","Tom",88.1,482.5,5),
+ ("The Skin","Sam",87.7,530.1,3),
+ ("maxhagler","Max",86.5,597.8,1),
+ ("Kids College Funds","Armstrong",86.2,629.6,3),
+ ("Team bxkeegan","Brian",85.8,566.2,1)]
 # --- DERIVED HEADER FACTS -------------------------------------------------
 # These were typed once and then rotted: the page said "Forty games each" when
 # it was 34, and the footer claimed coverage "through week 1 of 2026". Anything
 # that restates a number in words is computed here instead.
-THRU_WEEK = 8
-GAMES_EACH = 36
-DATED = "9 November 2026"
+THRU_WEEK = 9
+GAMES_EACH = 37
+DATED = "10 November 2026"
 
 def _eff_para():
     """The efficiency verdict. Tyler led for weeks; at week 8 Scott passed him."""

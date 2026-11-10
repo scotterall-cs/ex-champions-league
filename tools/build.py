@@ -35,7 +35,7 @@ SEASONS = [
  ("2023","Yahoo","Tyler",T,[("Tyler",T),("Greg",E),("Joe",E),("Armstrong",E),("Brian",E),("Max",T)],None,None,"m"),
  ("2024","Sleeper","Dan",E,[("Dan",E),("Taylor",T),("Max",T),("Scott",E),("Tyler",T),("Brian",E)],(25,19),(106.81,105.68),"m"),
  ("2025","Sleeper","Greg",E,[("Greg",E),("Joe",E),("Dan",E),("Scott",E),("Tyler",T),("Armstrong",E)],(16,28),(96.21,105.35),"m"),
- ("2026","Sleeper",None,None,None,(14,14),(105.82,99.80),"m"),
+ ("2026","Sleeper",None,None,None,(17,14),(106.56,98.28),"m"),
 ]
 CLASSOF={"Tyler":T,"Max":T,"Sam":T,"Taylor":T,"Detrick":T,"Armstrong":E,"Scott":E,"Joe":E,"Dan":E,"Greg":E,"Tom":E,"Brian":E}
 
@@ -71,7 +71,7 @@ for s,plat,ch,cc,pd,hh,ppg,era in SEASONS:
       <div class="evid">{evid}</div>
     </li>''')
 
-THRU_WEEK = 8        # derived from pull.py, not typed
+THRU_WEEK = 9        # derived from pull.py, not typed
 hbars=[]
 for s,plat,ch,cc,pd,hh,ppg,era in SEASONS:
     if not hh: continue

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Week 9 &mdash; EX Champions League</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --surface:#131519; --surface-2:#1B1E24;
+  --ink:#EDEFF3; --ink-2:#A8AEBA; --ink-3:#757C89;
+  --rule:#2A2E36; --rule-strong:#3A3F49;
+  --c11:#4884CE; --c12:#C08A1E;
+  --c11-wash:#1A2533; --c12-wash:#2A2313;
+  --good:#4884CE; --bad:#C08A1E;
+}
+*{box-sizing:border-box}
+body{background:var(--surface); color:var(--ink);
+  font-family:"Newsreader",Georgia,serif; font-size:17px; line-height:1.55; margin:0;
+  padding-block:44px 64px; padding-left:20px; padding-right:20px; -webkit-font-smoothing:antialiased}
+.wrap{max-width:880px; margin:0 auto}
+.disp{font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800; line-height:.92}
+.eyebrow,.gp,.gd,.gm,.gt,.sk,.ev,.el,.en,.pv,.pt,.pp,table,.cap,footer,.back
+  {font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+a.back{display:inline-block; font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-3); text-decoration:none; margin-bottom:22px; border-bottom:1px solid var(--rule); padding-bottom:3px}
+a.back:hover{color:var(--ink-2)}
+.eyebrow{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3); margin:0 0 12px}
+h1.disp{font-size:clamp(56px,13vw,104px); margin:0}
+.sub{font-size:18px; color:var(--ink-2); margin:16px 0 0; max-width:56ch;
+  border-left:2px solid var(--rule-strong); padding-left:16px}
+h2.disp{font-size:26px; margin:46px 0 12px; letter-spacing:.02em}
+.games{list-style:none; margin:0; padding:0}
+li.g{display:grid; grid-template-columns:1fr auto 34px 1fr auto 62px; gap:10px; align-items:baseline;
+  padding:12px 0; border-bottom:1px solid var(--rule)}
+li.g.cross{background:linear-gradient(90deg,transparent,rgba(72,132,206,.05))}
+.gt{font-size:14px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.gt.l{color:var(--ink-3)!important; font-weight:400}
+.gp{font-size:15px; font-weight:600; font-variant-numeric:tabular-nums}
+.gp.l{color:var(--ink-3); font-weight:400}
+.gd{font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); text-align:center}
+.gm{font-size:12px; color:var(--ink-3); text-align:right; font-variant-numeric:tabular-nums}
+.c11{color:var(--c11)} .c12{color:var(--c12)} .cx{color:var(--ink)}
+.story{border-left:3px solid var(--rule-strong); padding:2px 0 2px 18px; margin:0 0 26px}
+.story:nth-child(1){border-left-color:var(--c11)}
+.story:nth-child(2){border-left-color:var(--c12)}
+.story:nth-child(3){border-left-color:var(--c11)}
+.story:nth-child(4){border-left-color:var(--c12)}
+.sh{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:7px}
+.si{font-size:17px}
+.sk{font-size:10px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.st{font-size:15px; font-weight:600}
+.story p{margin:0; font-size:16px; color:var(--ink-2); max-width:62ch}
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:18px 34px}
+.eff{list-style:none; margin:0; padding:0}
+.eff li{display:grid; grid-template-columns:132px 1fr 50px 48px; gap:10px; align-items:center;
+  padding:6px 0; border-bottom:1px solid var(--rule)}
+.en{font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.ebar{height:8px; background:var(--surface-2); border-radius:2px; overflow:hidden}
+.efill{display:block; height:100%}
+.efill.c11{background:var(--c11)} .efill.c12{background:var(--c12)}
+.ev{font-size:12px; font-weight:600; text-align:right; font-variant-numeric:tabular-nums}
+.el{font-size:11px; color:var(--ink-3); text-align:right; font-variant-numeric:tabular-nums}
+.plist{list-style:none; margin:0; padding:0}
+.plist li{display:grid; grid-template-columns:62px 1fr; gap:10px; align-items:baseline;
+  padding:7px 0; border-bottom:1px solid var(--rule)}
+.pv{font-size:14px; font-weight:600; font-variant-numeric:tabular-nums}
+.pv.good{color:var(--good)} .pv.bad{color:var(--bad)}
+.pn{font-size:15.5px}
+.pp{font-size:10px; color:var(--ink-3); letter-spacing:.06em}
+.pt{grid-column:2; font-size:10.5px; color:var(--ink-3); letter-spacing:.05em; text-transform:uppercase}
+td.opt{color:var(--ink-3); font-style:italic}
+.cap{font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin:0 0 8px}
+table{border-collapse:collapse; width:100%; font-size:13px}
+th,td{text-align:left; padding:7px 12px; border-top:1px solid var(--rule); white-space:nowrap; font-variant-numeric:tabular-nums}
+th{font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); background:var(--surface-2); font-weight:600}
+.tablewrap{border:1px solid var(--rule); border-radius:3px; overflow-x:auto}
+.war{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:12px}
+.warbox{background:var(--surface-2); border:1px solid var(--rule); border-radius:3px; padding:14px 16px}
+.wark{font-family:"IBM Plex Mono",monospace; font-size:9.5px; font-weight:600; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink-3)}
+.warv{font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800;
+  font-size:38px; line-height:.9; margin-top:7px; font-variant-numeric:tabular-nums}
+.warn2{font-size:13px; color:var(--ink-2); margin-top:7px}
+.dash{color:var(--ink-3); font-weight:500; font-size:.75em}
+.callout{background:var(--surface-2); border:1px solid var(--rule-strong);
+  border-left:4px solid var(--c11); border-radius:4px; padding:18px 22px; margin:6px 0 30px}
+.coh{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:8px}
+.coi{font-size:18px}
+.cot{font-family:"Big Shoulders Display","Arial Narrow",sans-serif; font-weight:800; font-size:23px; letter-spacing:.01em}
+.cok{font-family:"IBM Plex Mono",monospace; font-size:9.5px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3)}
+.callout p{margin:0; font-size:16px; color:var(--ink-2); max-width:64ch}
+.nw{border-left:3px solid var(--rule-strong); padding:2px 0 2px 18px; margin:0 0 20px}
+.nw:nth-of-type(odd){border-left-color:var(--c11)}
+.nw:nth-of-type(even){border-left-color:var(--c12)}
+.nwh{display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; margin-bottom:6px}
+.nwt{font-size:15px; font-weight:600}
+.nwv{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3)}
+.nwr{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.05em; color:var(--ink-3)}
+.nw p{margin:0; font-size:16px; color:var(--ink-2); max-width:62ch}
+footer{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.05em; color:var(--ink-3); line-height:1.8}
+@media (max-width:660px){
+  .cols{grid-template-columns:1fr}
+  .war{grid-template-columns:1fr}
+  li.g{grid-template-columns:1fr auto; row-gap:2px}
+  li.g .gd{display:none} li.g .gm{grid-column:2; text-align:right}
+  .eff li{grid-template-columns:104px 1fr 46px 42px}
+  table{font-size:11px}
+  th,td{padding:6px 7px}
+  th{font-size:9px; letter-spacing:.04em}
+  td:first-child{max-width:118px; overflow:hidden; text-overflow:ellipsis}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; EX Champions League</a>
+  <p class="eyebrow">2026 Season &nbsp;&middot;&nbsp; Recap</p>
+  <h1 class="disp">Week 9</h1>
+  <p class="sub">Joe wins one at last, though it took Sam&rsquo;s roster collapsing to arrange it; Greg goes 6&ndash;0 while playing badly.</p>
+
+  <h2 class="disp">Scoreboard</h2>
+  <ul class="games"><li class="g cross">
+   <span class="gt w c12">vaught12</span><span class="gp w">121.56</span>
+   <span class="gd">def</span>
+   <span class="gt l c11">Team bxkeegan</span><span class="gp l">75.72</span>
+   <span class="gm">+45.84</span></li><li class="g cross">
+   <span class="gt w c12">The Skin</span><span class="gp w">119.08</span>
+   <span class="gd">def</span>
+   <span class="gt l c11">YoSoyFiesta</span><span class="gp l">106.00</span>
+   <span class="gm">+13.08</span></li><li class="g">
+   <span class="gt w c12">Cooking With Friends</span><span class="gp w">116.04</span>
+   <span class="gd">def</span>
+   <span class="gt l c12">Table Smashers</span><span class="gp l">92.92</span>
+   <span class="gm">+23.12</span></li><li class="g cross">
+   <span class="gt w c12">maxhagler</span><span class="gp w">112.78</span>
+   <span class="gd">def</span>
+   <span class="gt l c11">scert</span><span class="gp l">86.76</span>
+   <span class="gm">+26.02</span></li><li class="g">
+   <span class="gt w c11">Kids College Funds</span><span class="gp w">102.78</span>
+   <span class="gd">def</span>
+   <span class="gt l c11">Uncle Rico</span><span class="gp l">88.56</span>
+   <span class="gm">+14.22</span></li><li class="g">
+   <span class="gt w c11">Win One for the Lipper</span><span class="gp w">80.18</span>
+   <span class="gd">def</span>
+   <span class="gt l c11">Roughnecks</span><span class="gp l">62.54</span>
+   <span class="gm">+17.64</span></li></ul>
+
+  <h2 class="disp">The week in four parts</h2>
+  <section class="story"><div class="sh"><span class="si">&#128128;</span><span class="sk">The streak is dead</span><span class="st c11">Uncle Rico</span></div><p>Armstrong beat Greg <b>102.78 to 88.56</b> and it is over. The <b>sixteen-game winning streak</b>, the <b>8&ndash;0</b> start, the whole untouchable act &mdash; gone in an afternoon. Greg managed 88.56, the second-lowest score of his season, and for the first time since last year somebody has had to write the number <b>8&ndash;1</b> next to his name. Nine weeks of this league being boring at the top, finished.</p></section><section class="story"><div class="sh"><span class="si">&#129323;</span><span class="sk">And he did it with the worst lineup of the week</span><span class="st c11">Kids College Funds</span></div><p>This is the part Greg will struggle with. Armstrong ended the longest winning streak in league history while setting the <b>worst lineup of the week &mdash; 71.4% efficiency, 41.08 points abandoned on his bench</b>. His optimal was 143.86. It is the <b>second-worst lineup that has ever won a game in this league</b>, behind only Tyler&rsquo;s 67.8% last week. Two weeks running, somebody has won by barely showing up.</p></section><section class="story"><div class="sh"><span class="si">&#127881;</span><span class="sk">Tom wins a football game</span><span class="st c11">Win One for the Lipper</span></div><p>Six weeks after his last one, Tom beat Joe <b>80.18 to 62.54</b>. It was the basement bowl &mdash; the two 1&ndash;7 teams, the two men responsible for the second-lowest and fifth-lowest scores in league history &mdash; and Tom took it with 80.18, the tenth-best score of the week out of twelve. His first win since week three. He is 2&ndash;7 and absolutely thrilled about it.</p></section><section class="story"><div class="sh"><span class="si">&#127891;</span><span class="sk">&rsquo;12 sweep the lot</span><span class="st cx">The class war</span></div><p>All three cross-class games went one way: <b>Taylor 121.56 over Brian 75.72</b>, <b>Sam 119.08 over Dan 106.00</b>, <b>Max 112.78 over Scott 86.76</b>. That is a <b>3&ndash;0 week</b>, and it puts &rsquo;12 ahead of &rsquo;11 in the season series at <b>17&ndash;14</b> &mdash; their first lead since week three. The all-time gap, which was six games last week, is down to three.</p></section>
+  <aside class="callout"><div class="coh"><span class="coi">&#129746;</span><span class="cot">The Roughnecks corner</span><span class="cok">By request</span></div><p>The corner will not pretend. This was the one fixture the schedule had engineered for him &mdash; the other 1&ndash;7 team, the one game on the board Joe was supposed to win &mdash; and he lost it 80.18 to 62.54. He is 1&ndash;8. The honest good news is small but real: <b>62.54 is 20.28 better than last week</b>, and he got his lineup efficiency back up to <b>85.3%</b> after last week&rsquo;s 74.7%. And the receipt stays open. Joe has now had <b>1052.84</b> points scored against him, more than anyone in the league, and he is the <b>only manager in the competition whose season differential is worse than minus two hundred</b> &mdash; it is minus 297.80. Nobody is managing their way out of that. Nobody could.</p></aside>
+
+  <h2 class="disp">Standings</h2>
+  <p class="cap">Season to date &middot; Optimal is what every lineup would have scored if perfectly set</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th scope="col">Team</th><th scope="col">Record</th><th scope="col">Points for</th><th scope="col">Points against</th><th scope="col">Optimal</th></tr></thead>
+    <tbody><tr><td class="c11">Uncle Rico</td><td><b>8&ndash;1</b></td><td>1005.98</td><td class="dim">782.08</td><td class="opt">1078.48</td></tr><tr><td class="c12">maxhagler</td><td><b>7&ndash;2</b></td><td>1037.80</td><td class="dim">925.98</td><td class="opt">1242.00</td></tr><tr><td class="c11">Kids College Funds</td><td><b>6&ndash;3</b></td><td>991.22</td><td class="dim">914.26</td><td class="opt">1164.46</td></tr><tr><td class="c12">The Skin</td><td><b>5&ndash;4</b></td><td>978.90</td><td class="dim">940.12</td><td class="opt">1025.20</td></tr><tr><td class="c12">vaught12</td><td><b>5&ndash;4</b></td><td>905.66</td><td class="dim">818.76</td><td class="opt">1046.32</td></tr><tr><td class="c11">Team bxkeegan</td><td><b>5&ndash;4</b></td><td>823.48</td><td class="dim">800.38</td><td class="opt">933.60</td></tr><tr><td class="c11">YoSoyFiesta</td><td><b>4&ndash;5</b></td><td>1011.36</td><td class="dim">954.00</td><td class="opt">1111.00</td></tr><tr><td class="c12">Table Smashers</td><td><b>4&ndash;5</b></td><td>956.18</td><td class="dim">904.98</td><td class="opt">1056.68</td></tr><tr><td class="c11">scert</td><td><b>4&ndash;5</b></td><td>904.00</td><td class="dim">1049.96</td><td class="opt">1008.00</td></tr><tr><td class="c12">Cooking With Friends</td><td><b>3&ndash;6</b></td><td>916.76</td><td class="dim">954.04</td><td class="opt">1023.26</td></tr><tr><td class="c11">Win One for the Lipper</td><td><b>2&ndash;7</b></td><td>700.44</td><td class="dim">889.42</td><td class="opt">843.26</td></tr><tr><td class="c11">Roughnecks</td><td><b>1&ndash;8</b></td><td>755.04</td><td class="dim">1052.84</td><td class="opt">853.54</td></tr></tbody>
+  </table></div>
+
+  <h2 class="disp">Who set their lineup</h2>
+  <p class="cap">Share of the best lineup that roster could have started &middot; points left on the bench</p>
+  <ul class="eff"><li><span class="en">vaught12</span><span class="ebar"><span class="efill c12" style="width:99.1%"></span></span>
+ <span class="ev">99.1%</span><span class="el">&minus;1.1</span></li><li><span class="en">Uncle Rico</span><span class="ebar"><span class="efill c11" style="width:95.6%"></span></span>
+ <span class="ev">95.6%</span><span class="el">&minus;4.1</span></li><li><span class="en">scert</span><span class="ebar"><span class="efill c11" style="width:95.4%"></span></span>
+ <span class="ev">95.4%</span><span class="el">&minus;4.1</span></li><li><span class="en">Table Smashers</span><span class="ebar"><span class="efill c12" style="width:94.5%"></span></span>
+ <span class="ev">94.5%</span><span class="el">&minus;5.4</span></li><li><span class="en">YoSoyFiesta</span><span class="ebar"><span class="efill c11" style="width:94.1%"></span></span>
+ <span class="ev">94.1%</span><span class="el">&minus;6.6</span></li><li><span class="en">Cooking With Friends</span><span class="ebar"><span class="efill c12" style="width:93.9%"></span></span>
+ <span class="ev">93.9%</span><span class="el">&minus;7.6</span></li><li><span class="en">The Skin</span><span class="ebar"><span class="efill c12" style="width:93.8%"></span></span>
+ <span class="ev">93.8%</span><span class="el">&minus;7.9</span></li><li><span class="en">Roughnecks</span><span class="ebar"><span class="efill c11" style="width:85.3%"></span></span>
+ <span class="ev">85.3%</span><span class="el">&minus;10.8</span></li><li><span class="en">Win One for the Lipper</span><span class="ebar"><span class="efill c11" style="width:83.4%"></span></span>
+ <span class="ev">83.4%</span><span class="el">&minus;16.0</span></li><li><span class="en">maxhagler</span><span class="ebar"><span class="efill c12" style="width:81.7%"></span></span>
+ <span class="ev">81.7%</span><span class="el">&minus;25.3</span></li><li><span class="en">Team bxkeegan</span><span class="ebar"><span class="efill c11" style="width:79.9%"></span></span>
+ <span class="ev">79.9%</span><span class="el">&minus;19.0</span></li><li><span class="en">Kids College Funds</span><span class="ebar"><span class="efill c11" style="width:71.4%"></span></span>
+ <span class="ev">71.4%</span><span class="el">&minus;41.1</span></li></ul>
+
+  <h2 class="disp">Best and worst</h2>
+  <div class="cols">
+    <div><p class="cap">Top starts</p><ul class="plist"><li><span class="pv good">36.18</span><span class="pn">Jordan Love <span class="pp">QB</span></span><span class="pt">maxhagler</span></li><li><span class="pv good">34.30</span><span class="pn">Kenneth Walker III <span class="pp">RB</span></span><span class="pt">scert</span></li><li><span class="pv good">29.54</span><span class="pn">Joe Burrow <span class="pp">QB</span></span><span class="pt">Team bxkeegan</span></li><li><span class="pv good">28.50</span><span class="pn">CeeDee Lamb <span class="pp">WR</span></span><span class="pt">YoSoyFiesta</span></li><li><span class="pv good">28.00</span><span class="pn">Puka Nacua <span class="pp">WR</span></span><span class="pt">Uncle Rico</span></li></ul></div>
+    <div><p class="cap">Started anyway</p><ul class="plist"><li><span class="pv bad">-0.30</span><span class="pn">Mike Washington Jr. <span class="pp">RB</span></span><span class="pt">Roughnecks</span></li><li><span class="pv bad">0.00</span><span class="pn">Patriots <span class="pp">DEF</span></span><span class="pt">scert</span></li><li><span class="pv bad">0.00</span><span class="pn">Tyler Loop <span class="pp">K</span></span><span class="pt">Table Smashers</span></li><li><span class="pv bad">1.40</span><span class="pn">Tucker Kraft <span class="pp">TE</span></span><span class="pt">Team bxkeegan</span></li></ul></div>
+  </div>
+
+  <h2 class="disp">The class war</h2>
+  <div class="war">
+    <div class="warbox"><div class="wark">This week</div>
+      <div class="warv"><span class="c11">0</span><span class="dash">&ndash;</span><span class="c12">3</span></div>
+      <p class="warn2">&rsquo;12 won the week; &rsquo;12 outscored &rsquo;11 112.48 to 86.08 per team.</p></div>
+    <div class="warbox"><div class="wark">2026 to date</div>
+      <div class="warv"><span class="c12">17</span><span class="dash">&ndash;</span><span class="c11">14</span></div>
+      <p class="warn2">&rsquo;12 lead the season by three games.</p></div>
+    <div class="warbox"><div class="wark">All time</div>
+      <div class="warv"><span class="c11">61</span><span class="dash">&ndash;</span><span class="c12">58</span></div>
+      <p class="warn2">&rsquo;11 ahead by three games.</p></div>
+  </div>
+
+  <h2 class="disp">Next week</h2>
+  <p class="cap">Three of the six are cross-class, with &rsquo;12 leading the season series 17&ndash;14</p>
+  <div class="nw"><div class="nwh"><span class="nwt c11">scert</span><span class="nwv">v</span><span class="nwt c11">Roughnecks</span><span class="nwr">Scott 4&ndash;5 vs Joe 1&ndash;8</span></div><p>The two unluckiest men in the league, drawn against each other. Joe has conceded <b>1052.84</b>; Scott has conceded <b>1049.96</b>. They are separated by 2.88 points of misfortune across nine weeks. One of them is finally going to catch a break, and the other is going to feel robbed.</p></div><div class="nw"><div class="nwh"><span class="nwt c12">Table Smashers</span><span class="nwv">v</span><span class="nwt c11">Uncle Rico</span><span class="nwr">Tyler 4&ndash;5 vs Greg 8&ndash;1</span></div><p>Greg has lost a game for the first time all season and now meets the best lineup manager in league history sitting on a losing record. Tyler is 4&ndash;5 with a season optimal of 1056.68 he keeps failing to reach. Cross-class, and we find out immediately whether Greg was ever actually that good.</p></div><div class="nw"><div class="nwh"><span class="nwt c12">The Skin</span><span class="nwv">v</span><span class="nwt c12">vaught12</span><span class="nwr">Sam 5&ndash;4 vs Taylor 5&ndash;4</span></div><p>Identical 5&ndash;4 records, both of them &rsquo;12, so the class war sits this one out. Taylor just posted the highest score of the week at 121.56 on 99.1% efficiency, the best lineup anyone set. Sam has bounced back from the worst week of his season. Somebody is going 6&ndash;4 and somebody is going 5&ndash;5.</p></div><div class="nw"><div class="nwh"><span class="nwt c12">maxhagler</span><span class="nwv">v</span><span class="nwt c11">Team bxkeegan</span><span class="nwr">Max 7&ndash;2 vs Brian 5&ndash;4</span></div><p>Max is 7&ndash;2 with a season optimal of <b>1242.00</b>, the best roster in the league by seventy-seven, and he wasted 25.30 of it this week. Brian has the fewest points of anyone above .500 at 823.48 and keeps winning anyway. Cross-class, and &rsquo;11 need it badly.</p></div>
+
+  <footer>Source: Sleeper API, pulled 10 November 2026. Efficiency is points scored as a share of the highest-scoring legal lineup that roster could have started.</footer>
+</div>
+</body>
+</html>
