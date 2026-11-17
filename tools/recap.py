@@ -25,6 +25,15 @@ WEEK = 10
 SEASON = "2026"
 DATED = "17 November 2026"
 
+# The standfirst under the headline. It was hardcoded in the template until week
+# 10, so weeks 7, 8, 9 and 10 all shipped with week 6's sentence under their own
+# headline. It now reads the same one-line summary that drives the index card,
+# from tools/weeks.json, so the page and the index can never disagree again.
+import json as _json
+_WEEKS = _json.loads((ROOT / "tools" / "weeks.json").read_text(encoding="utf-8"))["weeks"]
+SUB = _WEEKS.get(str(WEEK))
+assert SUB, "tools/weeks.json has no summary for week %d - add it before building" % WEEK
+
 # winner, w_pts, loser, l_pts, cross-class?
 GAMES = [
  ("maxhagler",157.80,"Team bxkeegan",86.36,True),
@@ -225,6 +234,23 @@ nextweek_html="".join(
  f'<div class="nw"><div class="nwh"><span class="nwt c{cls(a)}">{a}</span>'
  f'<span class="nwv">v</span><span class="nwt c{cls(b)}">{b}</span>'
  f'<span class="nwr">{r}</span></div><p>{t}</p></div>' for a,b,r,t in NEXTWEEK)
+
+# The rest of the slate. NEXTWEEK only carries four write-ups, which meant two
+# real fixtures vanished from the page every week -- Sam spotted his own missing
+# from week 10. These are derived from _real, the schedule the guard fetched, so
+# they are always complete and always correct.
+_REC = {t: f"{w}&ndash;{l}" for t, w, l, *_ in STAND}
+_shown = {frozenset((a, b)) for a, b, _, _ in NEXTWEEK}
+_rest = sorted(tuple(sorted(p)) for p in _real if p not in _shown)
+if _rest:
+    nextweek_html += '<p class="nwrest-h">Also on the slate</p>' + "".join(
+        f'<div class="nw rest"><div class="nwh">'
+        f'<span class="nwt c{cls(a)}">{a}</span><span class="nwv">v</span>'
+        f'<span class="nwt c{cls(b)}">{b}</span>'
+        f'<span class="nwr">{_REC.get(a,"?")} vs {_REC.get(b,"?")}</span>'
+        f'{"<span class=\'nwx\'>cross-class</span>" if cls(a) != cls(b) else ""}'
+        f'</div></div>' for a, b in _rest)
+    print(f"  also on the slate: {len(_rest)} further fixture(s) rendered")
 story_html="".join(
  f'<section class="story"><div class="sh"><span class="si">{i}</span><span class="sk">{k}</span>'
  f'<span class="st c{cls(t)}">{t}</span></div><p>{b}</p></section>' for i,k,t,b in STORIES)
@@ -333,6 +359,12 @@ th{{font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--
 .nwv{{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3)}}
 .nwr{{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.05em; color:var(--ink-3)}}
 .nw p{{margin:0; font-size:16px; color:var(--ink-2); max-width:62ch}}
+.nwrest-h{{font-family:"IBM Plex Mono",monospace; font-size:9.5px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); margin:26px 0 12px}}
+.nw.rest{{margin-bottom:10px; padding-top:0; padding-bottom:0}}
+.nw.rest .nwh{{margin-bottom:0}}
+.nwx{{font-family:"IBM Plex Mono",monospace; font-size:9px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--c12)}}
 footer{{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.05em; color:var(--ink-3); line-height:1.8}}
 @media (max-width:660px){{
@@ -353,7 +385,7 @@ footer{{margin-top:48px; padding-top:16px; border-top:1px solid var(--rule);
   <a class="back" href="index.html">&larr; EX Champions League</a>
   <p class="eyebrow">{SEASON} Season &nbsp;&middot;&nbsp; Recap</p>
   <h1 class="disp">Week {WEEK}</h1>
-  <p class="sub">Joe wins one at last, though it took Sam&rsquo;s roster collapsing to arrange it; Greg goes 6&ndash;0 while playing badly.</p>
+  <p class="sub">{SUB}</p>
 
   <h2 class="disp">Scoreboard</h2>
   <ul class="games">{game_rows}</ul>

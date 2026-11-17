@@ -28,7 +28,7 @@ Before starting, confirm the week is actually final: `tools/pull.py` warns if th
 - **`STORIES`** in `recap.py` — four items, `(emoji, kicker, team, body)`. The subject must be a team name from the roster map, or any string if the story covers more than one team (the colour falls back to neutral).
 - **`CALLOUT`** — the Roughnecks corner. See below.
 - Superlatives. `pull.py` gives you ranked lists &mdash; read them rather than trusting memory.
-- **`NEXTWEEK`** — four previewed matchups. **Copy the pairings from the bottom of `pull.py` output. Never type them from memory.** `recap.py` fetches the real schedule and aborts if a previewed matchup does not exist.
+- **`NEXTWEEK`** — four written-up matchups. The other two are rendered automatically from the fetched schedule under “Also on the slate”, so the page always shows all six; pick the four with the best angles and the rest look after themselves. **Copy the pairings from the bottom of `pull.py` output. Never type them from memory.** `recap.py` fetches the real schedule and aborts if a previewed matchup does not exist.
 - The one-line week summary in `tools/weeks.json`.
 
 ## Tone
@@ -55,6 +55,8 @@ A highlighted box about **Joe (Roughnecks)**, warm and tongue-in-cheek, tagged "
 
 ## Things that have gone wrong before
 
+- **Weeks 7–10 all shipped with week 6's standfirst.** The `<p class="sub">` line was hardcoded in `recap.py`'s template, so it never changed while everything around it did. It now reads the same summary from `tools/weeks.json` that the index card uses. Sam spotted it, four weeks late.
+- **Two fixtures vanished from the page every week.** `NEXTWEEK` carries four write-ups and the template rendered only those, so two real games were invisible — Sam found his own missing from week 10. The remainder now derive from the fetched schedule.
 - **Four invented matchups shipped** because the preview was typed from memory instead of fetched. Hence the schedule guard in `recap.py` and check 6 in `verify.py`.
 - **A hardcoded "the gap is down to four"** survived three weeks of regeneration while the real gap moved to seven.
 - **A dead check passed silently** — `verify.py` now fails any check that matches zero rows.
