@@ -14,10 +14,14 @@ python tools/recordbook.py           # -> record-book.html
 python tools/recap.py                # -> week-<n>.html
 python tools/make_index.py           # -> index.html
 python tools/verify.py <week> week-<week>.html    # MUST pass
+#   9 checks, incl. the standfirst (check 9) and the full next-week slate
 git add -A && git commit && git push
 ```
 
-**If `verify.py` reports any failure, do not commit.** It prints `DO NOT PUBLISH`. Fix the page or stop and report; never push a failing page.
+**If `verify.py` reports any failure, do not commit.**
+
+**Check 9 (standfirst)** fails if the page's `<p class="sub">` is another week's summary — the bug that shipped four times — and, from week 7 on, if it does not equal this week's `tools/weeks.json` entry. Weeks 2–6 predate the shared source and are exempt from the equality half only. Both halves were tested against a deliberately tampered page before being trusted.
+ It prints `DO NOT PUBLISH`. Fix the page or stop and report; never push a failing page.
 
 Before starting, confirm the week is actually final: `tools/pull.py` warns if the NFL leg suggests games are still outstanding.
 

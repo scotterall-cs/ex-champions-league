@@ -245,6 +245,35 @@ def main():
     else:
         check(True, "every number in prose traces to this week's data")
 
+    # 9 standfirst
+    # Weeks 7, 8, 9 and 10 all shipped carrying week 6's standfirst, because the
+    # line was hardcoded in recap.py's template and nothing ever re-read it. The
+    # page's summary must match tools/weeks.json, which is what the index shows.
+    print("\n9. STANDFIRST")
+    import pathlib
+    _wj = pathlib.Path(__file__).resolve().parent / "weeks.json"
+    want = json.loads(_wj.read_text(encoding="utf-8"))["weeks"].get(str(week))
+    m = re.search(r'<p class="sub">(.*?)</p>', raw, re.S)
+    check(m is not None, "page has a standfirst")
+    check(want is not None, "tools/weeks.json has a summary for week %d" % week)
+    SHARED_FROM = 7          # week recap.py started reading the standfirst from weeks.json
+    if m:
+        got = " ".join(m.group(1).split())
+        allw = json.loads(_wj.read_text(encoding="utf-8"))["weeks"]
+        others = {w: " ".join(t.split()) for w, t in allw.items() if w != str(week)}
+        stolen = [w for w, t in others.items() if t == got]
+        check(not stolen, "standfirst is not another week's summary%s"
+              % (" (it is week %s's)" % stolen[0] if stolen else ""))
+        if week >= SHARED_FROM and want:
+            exp = " ".join(want.split())
+            check(got == exp, "standfirst matches weeks.json for week %d" % week)
+            if got != exp:
+                print("        page: %s" % got[:90])
+                print("        want: %s" % exp[:90])
+        elif week < SHARED_FROM:
+            print("  INFO  week %d predates the shared standfirst; only the "
+                  "not-another-week's check applies" % week)
+
     print("\n" + "=" * 70)
     print("%d failure(s), %d warning(s)" % (len(fails), len(warns)))
     if fails:
