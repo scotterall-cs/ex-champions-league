@@ -31,24 +31,24 @@ TITLES=[("Dan",3,"2015, 2019, 2024"),("Tyler",3,"2016, 2017, 2023"),("Detrick",2
         ("Armstrong",1,"2018"),("Scott",1,"2021"),("Taylor",1,"2022"),("Greg",1,"2025")]
 NOTITLE=["Brian","Joe","Max","Sam","Tom"]
 
-STAND=[("Uncle Rico","Greg",24,13,3968.5,3450.3,107.26),
- ("Table Smashers","Tyler",22,15,4085.5,3769.8,110.42),
- ("YoSoyFiesta","Dan",22,15,4054.8,3681.8,109.59),
- ("maxhagler","Max",20,17,3823.3,3802.6,103.33),
- ("vaught12","Taylor",20,17,3796.1,3781.6,102.60),
- ("scert","Scott",19,18,4176.3,4057.4,112.87),
- ("Kids College Funds","Armstrong",19,18,3925.7,4018.0,106.10),
- ("Roughnecks","Joe",17,20,3756.9,3899.4,101.54),
- ("The Skin","Sam",16,21,3764.0,3959.5,101.73),
- ("Team bxkeegan","Brian",16,21,3434.2,3719.3,92.82),
- ("Win One for the Lipper","Tom",14,23,3556.9,3846.8,96.13),
- ("Cooking With Friends","Detrick",13,24,3537.4,3893.1,95.61)]
+STAND=[("Uncle Rico","Greg",24,14,4041.7,3575.6,106.36),
+ ("Table Smashers","Tyler",23,15,4210.8,3843.1,110.81),
+ ("YoSoyFiesta","Dan",22,16,4164.8,3822.7,109.60),
+ ("maxhagler","Max",21,17,3981.1,3889.0,104.76),
+ ("vaught12","Taylor",21,17,3935.5,3900.1,103.56),
+ ("scert","Scott",19,19,4245.6,4134.4,111.73),
+ ("Kids College Funds","Armstrong",19,19,4024.4,4120.2,105.91),
+ ("Roughnecks","Joe",18,20,3833.9,3968.7,100.89),
+ ("The Skin","Sam",16,22,3882.6,4098.8,102.17),
+ ("Team bxkeegan","Brian",16,22,3520.6,3877.1,92.65),
+ ("Win One for the Lipper","Tom",15,23,3659.1,3945.5,96.29),
+ ("Cooking With Friends","Detrick",14,24,3678.3,4003.1,96.80)]
 BEST=[(167.86,"2025","12","Table Smashers"),
+ (157.80,"2026","10","maxhagler"),
  (156.70,"2026","5","Uncle Rico"),
  (154.64,"2024","11","maxhagler"),
  (154.16,"2024","2","scert"),
- (153.56,"2026","8","Kids College Funds"),
- (153.38,"2024","11","Table Smashers")]
+ (153.56,"2026","8","Kids College Funds")]
 WORST=[(27.50,"2025","12","Team bxkeegan"),
  (42.26,"2026","8","Roughnecks"),
  (42.64,"2024","2","Cooking With Friends"),
@@ -66,7 +66,7 @@ CLOSE=[(0.10,"2026","2","maxhagler",118.56,"Kids College Funds",118.46),
  (0.68,"2024","14","scert",145.68,"YoSoyFiesta",145.00),
  (0.94,"2024","9","Team bxkeegan",115.70,"Table Smashers",114.76)]
 STREAK=[("Uncle Rico","Greg",16,4),
- ("YoSoyFiesta","Dan",7,4),
+ ("YoSoyFiesta","Dan",7,5),
  ("Roughnecks","Joe",6,5),
  ("Table Smashers","Tyler",5,2),
  ("Kids College Funds","Armstrong",5,6),
@@ -77,25 +77,25 @@ STREAK=[("Uncle Rico","Greg",16,4),
  ("Win One for the Lipper","Tom",4,5),
  ("Cooking With Friends","Detrick",3,9),
  ("scert","Scott",3,3)]
-EFF=[("scert","Scott",91.7,377.7,5),
- ("Table Smashers","Tyler",91.6,376.1,3),
- ("YoSoyFiesta","Dan",91.3,387.1,5),
- ("Cooking With Friends","Detrick",89.9,398.2,4),
- ("Roughnecks","Joe",89.8,425.5,2),
- ("vaught12","Taylor",89.8,432.1,3),
- ("Uncle Rico","Greg",89.5,466.4,2),
- ("Win One for the Lipper","Tom",88.1,482.5,5),
- ("The Skin","Sam",87.7,530.1,3),
- ("maxhagler","Max",86.5,597.8,1),
- ("Kids College Funds","Armstrong",86.2,629.6,3),
- ("Team bxkeegan","Brian",85.8,566.2,1)]
+EFF=[("Table Smashers","Tyler",91.6,386.9,3),
+ ("scert","Scott",91.3,404.7,5),
+ ("YoSoyFiesta","Dan",91.0,413.7,5),
+ ("Cooking With Friends","Detrick",90.0,409.2,4),
+ ("Roughnecks","Joe",90.0,427.7,2),
+ ("vaught12","Taylor",89.7,451.3,3),
+ ("Uncle Rico","Greg",89.5,471.7,2),
+ ("Win One for the Lipper","Tom",88.4,482.5,6),
+ ("The Skin","Sam",87.8,540.8,3),
+ ("maxhagler","Max",86.8,605.8,1),
+ ("Team bxkeegan","Brian",86.1,569.4,1),
+ ("Kids College Funds","Armstrong",85.9,662.1,3)]
 # --- DERIVED HEADER FACTS -------------------------------------------------
 # These were typed once and then rotted: the page said "Forty games each" when
 # it was 34, and the footer claimed coverage "through week 1 of 2026". Anything
 # that restates a number in words is computed here instead.
-THRU_WEEK = 9
-GAMES_EACH = 37
-DATED = "10 November 2026"
+THRU_WEEK = 10
+GAMES_EACH = 38
+DATED = "17 November 2026"
 
 def _eff_para():
     """The efficiency verdict. Tyler led for weeks; at week 8 Scott passed him."""

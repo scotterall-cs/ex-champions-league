@@ -21,76 +21,78 @@ def publish(name, body):
     return p
 E,T = "11","12"
 
-WEEK = 9
+WEEK = 10
 SEASON = "2026"
-DATED = "10 November 2026"
+DATED = "17 November 2026"
 
 # winner, w_pts, loser, l_pts, cross-class?
 GAMES = [
- ("vaught12",121.56,"Team bxkeegan",75.72,True),
- ("The Skin",119.08,"YoSoyFiesta",106.00,True),
- ("Cooking With Friends",116.04,"Table Smashers",92.92,False),
- ("maxhagler",112.78,"scert",86.76,True),
- ("Kids College Funds",102.78,"Uncle Rico",88.56,False),
- ("Win One for the Lipper",80.18,"Roughnecks",62.54,False),
+ ("maxhagler",157.80,"Team bxkeegan",86.36,True),
+ ("Cooking With Friends",140.88,"YoSoyFiesta",110.02,True),
+ ("vaught12",139.36,"The Skin",118.56,False),
+ ("Table Smashers",125.32,"Uncle Rico",73.24,True),
+ ("Win One for the Lipper",102.18,"Kids College Funds",98.72,False),
+ ("Roughnecks",77.00,"scert",69.28,False),
 ]
 CLASSOF={"Table Smashers":T,"maxhagler":T,"The Skin":T,"vaught12":T,"Cooking With Friends":T,
  "Kids College Funds":E,"scert":E,"Roughnecks":E,"YoSoyFiesta":E,"Uncle Rico":E,
  "Win One for the Lipper":E,"Team bxkeegan":E}
-STAND=[("Uncle Rico",8,1,1005.98,782.08,1078.48),
- ("maxhagler",7,2,1037.80,925.98,1242.00),
- ("Kids College Funds",6,3,991.22,914.26,1164.46),
- ("The Skin",5,4,978.90,940.12,1025.20),
- ("vaught12",5,4,905.66,818.76,1046.32),
- ("Team bxkeegan",5,4,823.48,800.38,933.60),
- ("YoSoyFiesta",4,5,1011.36,954.00,1111.00),
- ("Table Smashers",4,5,956.18,904.98,1056.68),
- ("scert",4,5,904.00,1049.96,1008.00),
- ("Cooking With Friends",3,6,916.76,954.04,1023.26),
- ("Win One for the Lipper",2,7,700.44,889.42,843.26),
- ("Roughnecks",1,8,755.04,1052.84,853.54)]
-EFF=[("vaught12",99.1,1.10),
- ("Uncle Rico",95.6,4.10),
- ("scert",95.4,4.14),
- ("Table Smashers",94.5,5.40),
- ("YoSoyFiesta",94.1,6.60),
- ("Cooking With Friends",93.9,7.60),
- ("The Skin",93.8,7.90),
- ("Roughnecks",85.3,10.80),
- ("Win One for the Lipper",83.4,16.00),
- ("maxhagler",81.7,25.30),
- ("Team bxkeegan",79.9,19.02),
- ("Kids College Funds",71.4,41.08)]
-TOP=[(36.18,"Jordan Love","QB","maxhagler"),
- (34.30,"Kenneth Walker III","RB","scert"),
- (29.54,"Joe Burrow","QB","Team bxkeegan"),
- (28.50,"CeeDee Lamb","WR","YoSoyFiesta"),
- (28.00,"Puka Nacua","WR","Uncle Rico")]
-DUDS=[(-0.30,"Mike Washington Jr.","RB","Roughnecks"),
- (0.00,"Patriots","DEF","scert"),
- (0.00,"Tyler Loop","K","Table Smashers"),
- (1.40,"Tucker Kraft","TE","Team bxkeegan")]
+STAND=[("maxhagler",8,2,1195.60,1012.34,1407.80),
+ ("Uncle Rico",8,2,1079.22,907.40,1157.02),
+ ("Kids College Funds",6,4,1089.94,1016.44,1295.74),
+ ("vaught12",6,4,1045.02,937.32,1204.88),
+ ("The Skin",5,5,1097.46,1079.48,1154.46),
+ ("Table Smashers",5,5,1081.50,978.22,1192.80),
+ ("Team bxkeegan",5,5,909.84,958.18,1023.16),
+ ("YoSoyFiesta",4,6,1121.38,1094.88,1247.62),
+ ("Cooking With Friends",4,6,1057.64,1064.06,1175.14),
+ ("scert",4,6,973.28,1126.96,1104.28),
+ ("Win One for the Lipper",3,7,802.62,988.14,945.44),
+ ("Roughnecks",2,8,832.04,1122.12,932.74)]
+EFF=[("Win One for the Lipper",100.0,0.00),
+ ("Roughnecks",97.2,2.20),
+ ("Team bxkeegan",96.4,3.20),
+ ("maxhagler",95.2,8.00),
+ ("Uncle Rico",93.3,5.30),
+ ("Cooking With Friends",92.8,11.00),
+ ("Table Smashers",92.1,10.80),
+ ("The Skin",91.7,10.70),
+ ("vaught12",87.9,19.20),
+ ("YoSoyFiesta",80.5,26.60),
+ ("Kids College Funds",75.2,32.56),
+ ("scert",72.0,27.00)]
+TOP=[(44.30,"Christian McCaffrey","RB","Cooking With Friends"),
+ (40.70,"Jahmyr Gibbs","RB","maxhagler"),
+ (38.00,"George Pickens","WR","maxhagler"),
+ (35.42,"Patrick Mahomes","QB","Win One for the Lipper"),
+ (33.16,"Joe Burrow","QB","Team bxkeegan")]
+DUDS=[(0.00,"Nick Folk","K","Uncle Rico"),
+ (0.30,"Devin Singletary","RB","Uncle Rico"),
+ (0.30,"Jalen Coker","WR","maxhagler"),
+ (1.00,"Germie Bernard","WR","Roughnecks")]
 STORIES = [
- ("&#128128;","The streak is dead","Uncle Rico",
-  "Armstrong beat Greg <b>102.78 to 88.56</b> and it is over. The <b>sixteen-game winning streak</b>, the "
-  "<b>8&ndash;0</b> start, the whole untouchable act &mdash; gone in an afternoon. Greg managed 88.56, the "
-  "second-lowest score of his season, and for the first time since last year somebody has had to write the "
-  "number <b>8&ndash;1</b> next to his name. Nine weeks of this league being boring at the top, finished."),
- ("&#129323;","And he did it with the worst lineup of the week","Kids College Funds",
-  "This is the part Greg will struggle with. Armstrong ended the longest winning streak in league history while "
-  "setting the <b>worst lineup of the week &mdash; 71.4% efficiency, 41.08 points abandoned on his bench</b>. "
-  "His optimal was 143.86. It is the <b>second-worst lineup that has ever won a game in this league</b>, behind "
-  "only Tyler&rsquo;s 67.8% last week. Two weeks running, somebody has won by barely showing up."),
- ("&#127881;","Tom wins a football game","Win One for the Lipper",
-  "Six weeks after his last one, Tom beat Joe <b>80.18 to 62.54</b>. It was the basement bowl &mdash; the two "
-  "1&ndash;7 teams, the two men responsible for the second-lowest and fifth-lowest scores in league history &mdash; "
-  "and Tom took it with 80.18, the tenth-best score of the week out of twelve. "
-  "His first win since week three. He is 2&ndash;7 and absolutely thrilled about it."),
- ("&#127891;","&rsquo;12 sweep the lot","The class war",
-  "All three cross-class games went one way: <b>Taylor 121.56 over Brian 75.72</b>, <b>Sam 119.08 over Dan "
-  "106.00</b>, <b>Max 112.78 over Scott 86.76</b>. That is a <b>3&ndash;0 week</b>, and it puts &rsquo;12 ahead "
-  "of &rsquo;11 in the season series at <b>17&ndash;14</b> &mdash; their first lead since week three. "
-  "The all-time gap, which was six games last week, is down to three."),
+ ("&#128640;","Max posts the second-highest score in league history","maxhagler",
+  "<b>157.80</b>. Only Tyler&rsquo;s 167.86 in 2025 has ever beaten it, and nothing else this season comes close "
+  "&mdash; it passes Greg&rsquo;s 156.70 as the best of 2026. Jahmyr Gibbs went for <b>40.70</b> and George "
+  "Pickens for <b>38.00</b> in the same lineup. Brian was the man opposite, scored a thoroughly ordinary 86.36 "
+  "and lost by <b>71.44</b>. Max is 8&ndash;2 with a season optimal of <b>1407.80</b>, a hundred and twelve "
+  "clear of the next roster. The scary part is that he has turned only 1195.60 of that into actual points."),
+ ("&#127891;","The class war is level for the first time","The class war",
+  "&rsquo;12 swept all three cross-class games for the <b>second week running</b> &mdash; Max over Brian, "
+  "Detrick over Dan, Tyler over Greg. The season series is <b>20&ndash;14</b>, and the all-time ledger, which "
+  "&rsquo;11 led by <b>six games</b> a fortnight ago, is now <b>61&ndash;61</b>. "
+  "Dead level. Every cross-class game ever played, and there is nothing between them. "
+  "Week eleven has exactly one cross-class fixture on it. Whoever wins it leads the rivalry outright."),
+ ("&#128201;","Greg is in free fall","Uncle Rico",
+  "Tyler beat him <b>125.32 to 73.24</b>. That is <b>back-to-back defeats</b> for the man who started 8&ndash;0, "
+  "and 73.24 is the <b>lowest score of his season</b> by eleven points. Three weeks ago he was undefeated and "
+  "untouchable; he is now 8&ndash;2, and Max has drawn level with him at the top on record. "
+  "The streak did not just end, the wheels came off the car."),
+ ("&#127919;","Tom runs a perfect lineup and Armstrong throws one away","Win One for the Lipper",
+  "Tom beat Armstrong <b>102.18 to 98.72</b>, by 3.46, and he did it with the <b>only flawless lineup of the "
+  "week &mdash; 100.0% efficiency, 0.00 left on the bench</b>. Armstrong, meanwhile, managed <b>75.2%</b> and "
+  "left <b>32.56</b> sitting there. He lost by 3.46 while abandoning almost ten times that. "
+  "Last week Armstrong won a game with the second-worst lineup in league history. The bill has arrived."),
 ]
 # ---------------------------------------------------------------------------
 # THE ROUGHNECKS CORNER — recurring feature, do not drop.
@@ -107,32 +109,34 @@ STORIES = [
 # Set CALLOUT = None only if the feature is explicitly retired.
 # ---------------------------------------------------------------------------
 CALLOUT = ("&#129746;","The Roughnecks corner","By request",
- "The corner will not pretend. This was the one fixture the schedule had engineered for him &mdash; the other "
- "1&ndash;7 team, the one game on the board Joe was supposed to win &mdash; and he lost it 80.18 to 62.54. "
- "He is 1&ndash;8. The honest good news is small but real: <b>62.54 is 20.28 better than last week</b>, and he "
- "got his lineup efficiency back up to <b>85.3%</b> after last week&rsquo;s 74.7%. "
- "And the receipt stays open. Joe has now had <b>1052.84</b> points scored against him, more than anyone in the "
- "league, and he is the <b>only manager in the competition whose season differential is worse than minus two "
- "hundred</b> &mdash; it is minus 297.80. Nobody is managing their way out of that. Nobody could.")
+ "<b>JOE WON.</b> And for once this corner does not have to reach for it, because he won it properly: "
+ "<b>97.2% efficiency, the second-best lineup anyone set this week, 2.20 left on the bench</b>. "
+ "He beat Scott <b>77.00 to 69.28</b>. "
+ "Last week this section previewed exactly this fixture &mdash; the two unluckiest men in the league, drawn "
+ "against each other &mdash; and said one of them was finally going to catch a break. It was Joe. "
+ "He is 2&ndash;8, and both of his wins have come in the last five weeks, and Scott has now taken the "
+ "league&rsquo;s most-points-against title off him, <b>1126.96</b> to <b>1122.12</b>. "
+ "Joe is no longer the unluckiest man in this competition. He is just a man who won a football game.")
 NEXTWEEK = [
- ("scert","Roughnecks","Scott 4&ndash;5 vs Joe 1&ndash;8",
-  "The two unluckiest men in the league, drawn against each other. Joe has conceded <b>1052.84</b>; Scott has "
-  "conceded <b>1049.96</b>. They are separated by 2.88 points of misfortune across nine weeks. "
-  "One of them is finally going to catch a break, and the other is going to feel robbed."),
- ("Table Smashers","Uncle Rico","Tyler 4&ndash;5 vs Greg 8&ndash;1",
-  "Greg has lost a game for the first time all season and now meets the best lineup manager in league history "
-  "sitting on a losing record. Tyler is 4&ndash;5 with a season optimal of 1056.68 he keeps failing to reach. "
-  "Cross-class, and we find out immediately whether Greg was ever actually that good."),
- ("The Skin","vaught12","Sam 5&ndash;4 vs Taylor 5&ndash;4",
-  "Identical 5&ndash;4 records, both of them &rsquo;12, so the class war sits this one out. Taylor just posted "
-  "the highest score of the week at 121.56 on 99.1% efficiency, the best lineup anyone set. "
-  "Sam has bounced back from the worst week of his season. Somebody is going 6&ndash;4 and somebody is going 5&ndash;5."),
- ("maxhagler","Team bxkeegan","Max 7&ndash;2 vs Brian 5&ndash;4",
-  "Max is 7&ndash;2 with a season optimal of <b>1242.00</b>, the best roster in the league by seventy-seven, "
-  "and he wasted 25.30 of it this week. Brian has the fewest points of anyone above .500 at 823.48 "
-  "and keeps winning anyway. Cross-class, and &rsquo;11 need it badly."),
+ ("Table Smashers","Win One for the Lipper","Tyler 5&ndash;5 vs Tom 3&ndash;7",
+  "<b>The only cross-class game of the week, with the all-time series dead level at 61&ndash;61.</b> "
+  "Whoever wins this leads the rivalry outright for the first time all season. "
+  "Tyler has just beaten the undefeated team; Tom has just run the only perfect lineup of the week. "
+  "Of all the fixtures to be carrying this, it is these two."),
+ ("maxhagler","vaught12","Max 8&ndash;2 vs Taylor 6&ndash;4",
+  "Top of the table. Max has just posted the second-highest score in league history and owns the best roster "
+  "anyone has had this season at 1407.80. Taylor is 6&ndash;4 and quietly fourth on season optimal at 1204.88. "
+  "Both &rsquo;12, so the class war sits this one out and they can just hurt each other."),
+ ("YoSoyFiesta","Uncle Rico","Dan 4&ndash;6 vs Greg 8&ndash;2",
+  "Greg has lost two in a row and scored 73.24. Dan is 4&ndash;6 with <b>1121.38</b> points for &mdash; the "
+  "second-most in the league and a record that makes no sense next to it. "
+  "If Greg loses a third, the 8&ndash;0 start officially becomes the most misleading thing that happened all year."),
+ ("Roughnecks","Team bxkeegan","Joe 2&ndash;8 vs Brian 5&ndash;5",
+  "Joe is on a win and set the second-best lineup of the week. Brian has just been on the end of 157.80 and has "
+  "the fewest points of anyone at .500 or better, 909.84. Stranger things have happened than Joe making it two in a row, "
+  "and most of them have happened to Joe."),
 ]
-CLASS_WK=(3,0); CLASS_PPG=(112.48,86.08); CLASS_SEASON=(17,14); CLASS_ALLTIME=(58,61)
+CLASS_WK=(3,0); CLASS_PPG=(136.38,88.11); CLASS_SEASON=(20,14); CLASS_ALLTIME=(61,61)
 
 
 # Class-war captions are DERIVED, never typed. A hardcoded "gap is down to four"
